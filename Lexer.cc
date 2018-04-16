@@ -1,25 +1,12 @@
-#include <string>
-#include <stdio.h>
+#include "Lexer.h"
 
-using namespace std;
+string Cinderella::Lexer::IdentifierStr;
+double Cinderella::Lexer::NumVal;
+char Cinderella::Lexer::CurTok = ';';
+map<char, int> Cinderella::Lexer::BinopPrecedence;
 
-enum Token {
-    tok_eof = -1,
-
-    tok_def = -2,
-
-    tok_extern = -3,
-
-    tok_identifier = -4,
-
-    tok_number = -5
-};
-
-static string IdentifierStr;
-static double NumVal;
-
-static int gettok() {
-    static int LastChar = '';
+inline int Cinderella::Lexer::gettok() {
+    static int LastChar = ' ';
 
     // skip any spaces;
     while(isspace(LastChar)) {
@@ -43,7 +30,7 @@ static int gettok() {
     }
 
     if (isdigit(LastChar) || LastChar == '.') {   // Number: [0-9.]+
-        std::string NumStr;
+        string NumStr;
         do {
             NumStr += LastChar;
             LastChar = getchar();
@@ -70,4 +57,15 @@ static int gettok() {
     int ThisChar = LastChar;
     LastChar = getchar();
     return ThisChar;
+}
+
+int main(int argc, char* args[]) {
+    // Set precedence list;
+    Cinderella::Lexer::BinopPrecedence['<'] = 10;
+    Cinderella::Lexer::BinopPrecedence['+'] = 20;
+    Cinderella::Lexer::BinopPrecedence['-'] = 30;
+    Cinderella::Lexer::BinopPrecedence['*'] = 40;
+
+    // Dealing with inputs;
+    Cinderella::Lexer::MainCLILoop();
 }
