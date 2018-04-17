@@ -2,15 +2,16 @@
 
 #include "ExprAST.h"
 #include <string>
+#include <memory>
 
 using namespace std;
 
 class CallExprAST : public ExprAST {
     string Callee;
-    vector<ExprAST*> Args;
+    vector<std::unique_ptr<ExprAST>> Args;
 
 public:
-    CallExprAST(const string &callee, vector<ExprAST*> &args)
-            : Callee(callee), Args(args) {}
+    CallExprAST(const string &callee, vector<std::unique_ptr<ExprAST>> Args)
+            : Callee(callee), Args(std::move(Args)) {}
 
 };

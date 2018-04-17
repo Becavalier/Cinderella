@@ -2,12 +2,13 @@
 
 #include "PrototypeAST.h"
 #include "ExprAST.h"
+#include <memory>
 
 class FunctionAST {
-    PrototypeAST *Proto;
-    ExprAST *Body;
+    std::unique_ptr<PrototypeAST> Proto;
+    std::unique_ptr<ExprAST> Body;
 
 public:
-    FunctionAST(PrototypeAST *proto, ExprAST *body)
-            : Proto(proto), Body(body) {}
+    FunctionAST(std::unique_ptr<PrototypeAST> Proto, std::unique_ptr<ExprAST> Body)
+            : Proto(std::move(Proto)), Body(std::move(Body)) {}
 };

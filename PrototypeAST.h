@@ -10,6 +10,10 @@ class PrototypeAST {
     vector<string> Args;
 
 public:
-    PrototypeAST (const string &name, const vector<string> &args)
-            :Name(name), Args(args) {}
+    PrototypeAST (const string &name, const vector<string> Args)
+            :Name(name), Args(move(Args)) {}
+
+    const string &getName() const {
+        return Name;
+    }
 };
