@@ -1,12 +1,11 @@
 #include "Lexer.h"
 
-string Cinderella::Lexer::IdentifierStr;
-double Cinderella::Lexer::NumVal;
-char Cinderella::Lexer::CurTok = ';';
-map<char, int> Cinderella::Lexer::BinopPrecedence;
+std::string Lexer::IdentifierStr;
+double Lexer::NumVal;
+char Lexer::CurTok = ';';
 
 // the implementation of "_find_token()"
-inline int Cinderella::Lexer::_find_token() {
+int Lexer::_find_token() {
     static int LastChar = ' ';
 
     // skip spaces;
@@ -16,16 +15,16 @@ inline int Cinderella::Lexer::_find_token() {
 
     // identifier for style like: [a-zA-Z][a-zA-Z0-9]*;
     if (isalpha(LastChar)) {
-        Cinderella::Lexer::IdentifierStr = LastChar;
+        Lexer::IdentifierStr = LastChar;
         // alphanumeric condition;
         while (isalnum((LastChar = getchar()))) {
-            Cinderella::Lexer::IdentifierStr += LastChar;
+            Lexer::IdentifierStr += LastChar;
         }
 
-        if (Cinderella::Lexer::IdentifierStr == "def")
+        if (Lexer::IdentifierStr == "def")
             return tok_def;
 
-        if (Cinderella::Lexer::IdentifierStr == "extern")
+        if (Lexer::IdentifierStr == "extern")
             return tok_extern;
 
         return tok_identifier;
@@ -33,14 +32,14 @@ inline int Cinderella::Lexer::_find_token() {
 
     // number for style like: [0-9.]+
     if (isdigit(LastChar) || LastChar == '.') {
-        string NumStr;
+        std::string NumStr;
         do {
             NumStr += LastChar;
             LastChar = getchar();
         } while (isdigit(LastChar) || LastChar == '.');
 
         // convert a string to double
-        NumVal = strtod(NumStr.c_str(), 0);
+        NumVal = std::strtod(NumStr.c_str(), 0);
         return tok_number;
     }
 
@@ -61,15 +60,4 @@ inline int Cinderella::Lexer::_find_token() {
     int ThisChar = LastChar;
     LastChar = getchar();
     return ThisChar;
-}
-
-int main(int argc, char* args[]) {
-    // Set precedence list;
-    Cinderella::Lexer::BinopPrecedence['<'] = 10;
-    Cinderella::Lexer::BinopPrecedence['+'] = 20;
-    Cinderella::Lexer::BinopPrecedence['-'] = 30;
-    Cinderella::Lexer::BinopPrecedence['*'] = 40;
-
-    // Dealing with inputs;
-    Cinderella::Lexer::MainCLILoop();
 }

@@ -1,15 +1,17 @@
 #pragma once
 
+#include "LLVMBinder.h"
 #include <string>
 #include "ExprAST.h"
+#include "llvm/IR/Value.h"
 
-
-using namespace std;
-
-class VariableExprAST: public  ExprAST {
-    string Name;
+class VariableExprAST: public ExprAST {
+    std::string Name;
 
 public:
-    VariableExprAST(const string &name)
+    VariableExprAST(const std::string &name)
             : Name(name) {}
+
+    // Used for generating LLVM IR;
+    llvm::Value *codegen() override;
 };

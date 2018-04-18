@@ -18,6 +18,7 @@ set (CINDERELLA_VERSION_MINOR 1)
 set (CMAKE_CXX_STANDARD 11)
 set (CMAKE_CXX_FLAGS_RELEASE "-O3")
 
+
 # Configure a header file to pass some of the CMake settings to the source code;
 
 # configure_file (
@@ -32,7 +33,9 @@ include_directories("${PROJECT_SOURCE_DIR}/llvm/build/include")
 
 
 # Add the executable;
-add_executable(Cinderella Lexer.cc)
+add_executable(Cinderella Cinderella.cc Cinderella.h Lexer.cc Lexer.h BinaryExprAST.cc BinaryExprAST.h CallExprAST.cc CallExprAST.h
+        ExprAST.cc ExprAST.h FunctionAST.cc FunctionAST.h LLVMBinder.cc LLVMBinder.h NumberExprAST.cc NumberExprAST.h Parser.h Parser.cc
+        PrototypeAST.cc PrototypeAST.h VariableExprAST.cc VariableExprAST.h)
 
 # Find the libraries that correspond to the LLVM components that we wish to use;
 llvm_map_components_to_libnames(llvm_libs core)

@@ -57,9 +57,22 @@ include CMakeFiles/Cinderella.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Cinderella.dir/flags.make
 
+CMakeFiles/Cinderella.dir/Cinderella.cc.o: CMakeFiles/Cinderella.dir/flags.make
+CMakeFiles/Cinderella.dir/Cinderella.cc.o: ../Cinderella.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Cinderella.dir/Cinderella.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/Cinderella.cc.o -c /Users/jason/Desktop/Repo/Cinderella/Cinderella.cc
+
+CMakeFiles/Cinderella.dir/Cinderella.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Cinderella.dir/Cinderella.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jason/Desktop/Repo/Cinderella/Cinderella.cc > CMakeFiles/Cinderella.dir/Cinderella.cc.i
+
+CMakeFiles/Cinderella.dir/Cinderella.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Cinderella.dir/Cinderella.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jason/Desktop/Repo/Cinderella/Cinderella.cc -o CMakeFiles/Cinderella.dir/Cinderella.cc.s
+
 CMakeFiles/Cinderella.dir/Lexer.cc.o: CMakeFiles/Cinderella.dir/flags.make
 CMakeFiles/Cinderella.dir/Lexer.cc.o: ../Lexer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Cinderella.dir/Lexer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Cinderella.dir/Lexer.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/Lexer.cc.o -c /Users/jason/Desktop/Repo/Cinderella/Lexer.cc
 
 CMakeFiles/Cinderella.dir/Lexer.cc.i: cmake_force
@@ -70,21 +83,158 @@ CMakeFiles/Cinderella.dir/Lexer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Cinderella.dir/Lexer.cc.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jason/Desktop/Repo/Cinderella/Lexer.cc -o CMakeFiles/Cinderella.dir/Lexer.cc.s
 
+CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o: CMakeFiles/Cinderella.dir/flags.make
+CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o: ../BinaryExprAST.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o -c /Users/jason/Desktop/Repo/Cinderella/BinaryExprAST.cc
+
+CMakeFiles/Cinderella.dir/BinaryExprAST.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Cinderella.dir/BinaryExprAST.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jason/Desktop/Repo/Cinderella/BinaryExprAST.cc > CMakeFiles/Cinderella.dir/BinaryExprAST.cc.i
+
+CMakeFiles/Cinderella.dir/BinaryExprAST.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Cinderella.dir/BinaryExprAST.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jason/Desktop/Repo/Cinderella/BinaryExprAST.cc -o CMakeFiles/Cinderella.dir/BinaryExprAST.cc.s
+
+CMakeFiles/Cinderella.dir/CallExprAST.cc.o: CMakeFiles/Cinderella.dir/flags.make
+CMakeFiles/Cinderella.dir/CallExprAST.cc.o: ../CallExprAST.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Cinderella.dir/CallExprAST.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/CallExprAST.cc.o -c /Users/jason/Desktop/Repo/Cinderella/CallExprAST.cc
+
+CMakeFiles/Cinderella.dir/CallExprAST.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Cinderella.dir/CallExprAST.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jason/Desktop/Repo/Cinderella/CallExprAST.cc > CMakeFiles/Cinderella.dir/CallExprAST.cc.i
+
+CMakeFiles/Cinderella.dir/CallExprAST.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Cinderella.dir/CallExprAST.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jason/Desktop/Repo/Cinderella/CallExprAST.cc -o CMakeFiles/Cinderella.dir/CallExprAST.cc.s
+
+CMakeFiles/Cinderella.dir/ExprAST.cc.o: CMakeFiles/Cinderella.dir/flags.make
+CMakeFiles/Cinderella.dir/ExprAST.cc.o: ../ExprAST.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Cinderella.dir/ExprAST.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/ExprAST.cc.o -c /Users/jason/Desktop/Repo/Cinderella/ExprAST.cc
+
+CMakeFiles/Cinderella.dir/ExprAST.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Cinderella.dir/ExprAST.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jason/Desktop/Repo/Cinderella/ExprAST.cc > CMakeFiles/Cinderella.dir/ExprAST.cc.i
+
+CMakeFiles/Cinderella.dir/ExprAST.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Cinderella.dir/ExprAST.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jason/Desktop/Repo/Cinderella/ExprAST.cc -o CMakeFiles/Cinderella.dir/ExprAST.cc.s
+
+CMakeFiles/Cinderella.dir/FunctionAST.cc.o: CMakeFiles/Cinderella.dir/flags.make
+CMakeFiles/Cinderella.dir/FunctionAST.cc.o: ../FunctionAST.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Cinderella.dir/FunctionAST.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/FunctionAST.cc.o -c /Users/jason/Desktop/Repo/Cinderella/FunctionAST.cc
+
+CMakeFiles/Cinderella.dir/FunctionAST.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Cinderella.dir/FunctionAST.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jason/Desktop/Repo/Cinderella/FunctionAST.cc > CMakeFiles/Cinderella.dir/FunctionAST.cc.i
+
+CMakeFiles/Cinderella.dir/FunctionAST.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Cinderella.dir/FunctionAST.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jason/Desktop/Repo/Cinderella/FunctionAST.cc -o CMakeFiles/Cinderella.dir/FunctionAST.cc.s
+
+CMakeFiles/Cinderella.dir/LLVMBinder.cc.o: CMakeFiles/Cinderella.dir/flags.make
+CMakeFiles/Cinderella.dir/LLVMBinder.cc.o: ../LLVMBinder.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Cinderella.dir/LLVMBinder.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/LLVMBinder.cc.o -c /Users/jason/Desktop/Repo/Cinderella/LLVMBinder.cc
+
+CMakeFiles/Cinderella.dir/LLVMBinder.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Cinderella.dir/LLVMBinder.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jason/Desktop/Repo/Cinderella/LLVMBinder.cc > CMakeFiles/Cinderella.dir/LLVMBinder.cc.i
+
+CMakeFiles/Cinderella.dir/LLVMBinder.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Cinderella.dir/LLVMBinder.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jason/Desktop/Repo/Cinderella/LLVMBinder.cc -o CMakeFiles/Cinderella.dir/LLVMBinder.cc.s
+
+CMakeFiles/Cinderella.dir/NumberExprAST.cc.o: CMakeFiles/Cinderella.dir/flags.make
+CMakeFiles/Cinderella.dir/NumberExprAST.cc.o: ../NumberExprAST.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Cinderella.dir/NumberExprAST.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/NumberExprAST.cc.o -c /Users/jason/Desktop/Repo/Cinderella/NumberExprAST.cc
+
+CMakeFiles/Cinderella.dir/NumberExprAST.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Cinderella.dir/NumberExprAST.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jason/Desktop/Repo/Cinderella/NumberExprAST.cc > CMakeFiles/Cinderella.dir/NumberExprAST.cc.i
+
+CMakeFiles/Cinderella.dir/NumberExprAST.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Cinderella.dir/NumberExprAST.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jason/Desktop/Repo/Cinderella/NumberExprAST.cc -o CMakeFiles/Cinderella.dir/NumberExprAST.cc.s
+
+CMakeFiles/Cinderella.dir/Parser.cc.o: CMakeFiles/Cinderella.dir/flags.make
+CMakeFiles/Cinderella.dir/Parser.cc.o: ../Parser.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Cinderella.dir/Parser.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/Parser.cc.o -c /Users/jason/Desktop/Repo/Cinderella/Parser.cc
+
+CMakeFiles/Cinderella.dir/Parser.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Cinderella.dir/Parser.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jason/Desktop/Repo/Cinderella/Parser.cc > CMakeFiles/Cinderella.dir/Parser.cc.i
+
+CMakeFiles/Cinderella.dir/Parser.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Cinderella.dir/Parser.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jason/Desktop/Repo/Cinderella/Parser.cc -o CMakeFiles/Cinderella.dir/Parser.cc.s
+
+CMakeFiles/Cinderella.dir/PrototypeAST.cc.o: CMakeFiles/Cinderella.dir/flags.make
+CMakeFiles/Cinderella.dir/PrototypeAST.cc.o: ../PrototypeAST.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Cinderella.dir/PrototypeAST.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/PrototypeAST.cc.o -c /Users/jason/Desktop/Repo/Cinderella/PrototypeAST.cc
+
+CMakeFiles/Cinderella.dir/PrototypeAST.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Cinderella.dir/PrototypeAST.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jason/Desktop/Repo/Cinderella/PrototypeAST.cc > CMakeFiles/Cinderella.dir/PrototypeAST.cc.i
+
+CMakeFiles/Cinderella.dir/PrototypeAST.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Cinderella.dir/PrototypeAST.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jason/Desktop/Repo/Cinderella/PrototypeAST.cc -o CMakeFiles/Cinderella.dir/PrototypeAST.cc.s
+
+CMakeFiles/Cinderella.dir/VariableExprAST.cc.o: CMakeFiles/Cinderella.dir/flags.make
+CMakeFiles/Cinderella.dir/VariableExprAST.cc.o: ../VariableExprAST.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Cinderella.dir/VariableExprAST.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/VariableExprAST.cc.o -c /Users/jason/Desktop/Repo/Cinderella/VariableExprAST.cc
+
+CMakeFiles/Cinderella.dir/VariableExprAST.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Cinderella.dir/VariableExprAST.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jason/Desktop/Repo/Cinderella/VariableExprAST.cc > CMakeFiles/Cinderella.dir/VariableExprAST.cc.i
+
+CMakeFiles/Cinderella.dir/VariableExprAST.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Cinderella.dir/VariableExprAST.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jason/Desktop/Repo/Cinderella/VariableExprAST.cc -o CMakeFiles/Cinderella.dir/VariableExprAST.cc.s
+
 # Object files for target Cinderella
 Cinderella_OBJECTS = \
-"CMakeFiles/Cinderella.dir/Lexer.cc.o"
+"CMakeFiles/Cinderella.dir/Cinderella.cc.o" \
+"CMakeFiles/Cinderella.dir/Lexer.cc.o" \
+"CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o" \
+"CMakeFiles/Cinderella.dir/CallExprAST.cc.o" \
+"CMakeFiles/Cinderella.dir/ExprAST.cc.o" \
+"CMakeFiles/Cinderella.dir/FunctionAST.cc.o" \
+"CMakeFiles/Cinderella.dir/LLVMBinder.cc.o" \
+"CMakeFiles/Cinderella.dir/NumberExprAST.cc.o" \
+"CMakeFiles/Cinderella.dir/Parser.cc.o" \
+"CMakeFiles/Cinderella.dir/PrototypeAST.cc.o" \
+"CMakeFiles/Cinderella.dir/VariableExprAST.cc.o"
 
 # External object files for target Cinderella
 Cinderella_EXTERNAL_OBJECTS =
 
+Cinderella: CMakeFiles/Cinderella.dir/Cinderella.cc.o
 Cinderella: CMakeFiles/Cinderella.dir/Lexer.cc.o
+Cinderella: CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o
+Cinderella: CMakeFiles/Cinderella.dir/CallExprAST.cc.o
+Cinderella: CMakeFiles/Cinderella.dir/ExprAST.cc.o
+Cinderella: CMakeFiles/Cinderella.dir/FunctionAST.cc.o
+Cinderella: CMakeFiles/Cinderella.dir/LLVMBinder.cc.o
+Cinderella: CMakeFiles/Cinderella.dir/NumberExprAST.cc.o
+Cinderella: CMakeFiles/Cinderella.dir/Parser.cc.o
+Cinderella: CMakeFiles/Cinderella.dir/PrototypeAST.cc.o
+Cinderella: CMakeFiles/Cinderella.dir/VariableExprAST.cc.o
 Cinderella: CMakeFiles/Cinderella.dir/build.make
 Cinderella: ../llvm/build/lib/libLLVMCore.a
 Cinderella: ../llvm/build/lib/libLLVMBinaryFormat.a
 Cinderella: ../llvm/build/lib/libLLVMSupport.a
 Cinderella: ../llvm/build/lib/libLLVMDemangle.a
 Cinderella: CMakeFiles/Cinderella.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Cinderella"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable Cinderella"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Cinderella.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

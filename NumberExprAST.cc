@@ -1,5 +1,6 @@
 #include "NumberExprAST.h"
 
-Value *NumberExprAST::Codegen() {
-    return ConstantFP::get(getGlobalContext(), APFloat(Val));
+llvm::Value *NumberExprAST::codegen() {
+    // Retrieve data from constant pool;
+    return llvm::ConstantFP::get(LLVMBinder::TheContext, llvm::APFloat(Val));
 }

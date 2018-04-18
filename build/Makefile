@@ -136,6 +136,168 @@ intrinsics_gen/fast:
 	$(MAKE) -f CMakeFiles/intrinsics_gen.dir/build.make CMakeFiles/intrinsics_gen.dir/build
 .PHONY : intrinsics_gen/fast
 
+BinaryExprAST.o: BinaryExprAST.cc.o
+
+.PHONY : BinaryExprAST.o
+
+# target to build an object file
+BinaryExprAST.cc.o:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o
+.PHONY : BinaryExprAST.cc.o
+
+BinaryExprAST.i: BinaryExprAST.cc.i
+
+.PHONY : BinaryExprAST.i
+
+# target to preprocess a source file
+BinaryExprAST.cc.i:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/BinaryExprAST.cc.i
+.PHONY : BinaryExprAST.cc.i
+
+BinaryExprAST.s: BinaryExprAST.cc.s
+
+.PHONY : BinaryExprAST.s
+
+# target to generate assembly for a file
+BinaryExprAST.cc.s:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/BinaryExprAST.cc.s
+.PHONY : BinaryExprAST.cc.s
+
+CallExprAST.o: CallExprAST.cc.o
+
+.PHONY : CallExprAST.o
+
+# target to build an object file
+CallExprAST.cc.o:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/CallExprAST.cc.o
+.PHONY : CallExprAST.cc.o
+
+CallExprAST.i: CallExprAST.cc.i
+
+.PHONY : CallExprAST.i
+
+# target to preprocess a source file
+CallExprAST.cc.i:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/CallExprAST.cc.i
+.PHONY : CallExprAST.cc.i
+
+CallExprAST.s: CallExprAST.cc.s
+
+.PHONY : CallExprAST.s
+
+# target to generate assembly for a file
+CallExprAST.cc.s:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/CallExprAST.cc.s
+.PHONY : CallExprAST.cc.s
+
+Cinderella.o: Cinderella.cc.o
+
+.PHONY : Cinderella.o
+
+# target to build an object file
+Cinderella.cc.o:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/Cinderella.cc.o
+.PHONY : Cinderella.cc.o
+
+Cinderella.i: Cinderella.cc.i
+
+.PHONY : Cinderella.i
+
+# target to preprocess a source file
+Cinderella.cc.i:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/Cinderella.cc.i
+.PHONY : Cinderella.cc.i
+
+Cinderella.s: Cinderella.cc.s
+
+.PHONY : Cinderella.s
+
+# target to generate assembly for a file
+Cinderella.cc.s:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/Cinderella.cc.s
+.PHONY : Cinderella.cc.s
+
+ExprAST.o: ExprAST.cc.o
+
+.PHONY : ExprAST.o
+
+# target to build an object file
+ExprAST.cc.o:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/ExprAST.cc.o
+.PHONY : ExprAST.cc.o
+
+ExprAST.i: ExprAST.cc.i
+
+.PHONY : ExprAST.i
+
+# target to preprocess a source file
+ExprAST.cc.i:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/ExprAST.cc.i
+.PHONY : ExprAST.cc.i
+
+ExprAST.s: ExprAST.cc.s
+
+.PHONY : ExprAST.s
+
+# target to generate assembly for a file
+ExprAST.cc.s:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/ExprAST.cc.s
+.PHONY : ExprAST.cc.s
+
+FunctionAST.o: FunctionAST.cc.o
+
+.PHONY : FunctionAST.o
+
+# target to build an object file
+FunctionAST.cc.o:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/FunctionAST.cc.o
+.PHONY : FunctionAST.cc.o
+
+FunctionAST.i: FunctionAST.cc.i
+
+.PHONY : FunctionAST.i
+
+# target to preprocess a source file
+FunctionAST.cc.i:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/FunctionAST.cc.i
+.PHONY : FunctionAST.cc.i
+
+FunctionAST.s: FunctionAST.cc.s
+
+.PHONY : FunctionAST.s
+
+# target to generate assembly for a file
+FunctionAST.cc.s:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/FunctionAST.cc.s
+.PHONY : FunctionAST.cc.s
+
+LLVMBinder.o: LLVMBinder.cc.o
+
+.PHONY : LLVMBinder.o
+
+# target to build an object file
+LLVMBinder.cc.o:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/LLVMBinder.cc.o
+.PHONY : LLVMBinder.cc.o
+
+LLVMBinder.i: LLVMBinder.cc.i
+
+.PHONY : LLVMBinder.i
+
+# target to preprocess a source file
+LLVMBinder.cc.i:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/LLVMBinder.cc.i
+.PHONY : LLVMBinder.cc.i
+
+LLVMBinder.s: LLVMBinder.cc.s
+
+.PHONY : LLVMBinder.s
+
+# target to generate assembly for a file
+LLVMBinder.cc.s:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/LLVMBinder.cc.s
+.PHONY : LLVMBinder.cc.s
+
 Lexer.o: Lexer.cc.o
 
 .PHONY : Lexer.o
@@ -163,6 +325,114 @@ Lexer.cc.s:
 	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/Lexer.cc.s
 .PHONY : Lexer.cc.s
 
+NumberExprAST.o: NumberExprAST.cc.o
+
+.PHONY : NumberExprAST.o
+
+# target to build an object file
+NumberExprAST.cc.o:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/NumberExprAST.cc.o
+.PHONY : NumberExprAST.cc.o
+
+NumberExprAST.i: NumberExprAST.cc.i
+
+.PHONY : NumberExprAST.i
+
+# target to preprocess a source file
+NumberExprAST.cc.i:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/NumberExprAST.cc.i
+.PHONY : NumberExprAST.cc.i
+
+NumberExprAST.s: NumberExprAST.cc.s
+
+.PHONY : NumberExprAST.s
+
+# target to generate assembly for a file
+NumberExprAST.cc.s:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/NumberExprAST.cc.s
+.PHONY : NumberExprAST.cc.s
+
+Parser.o: Parser.cc.o
+
+.PHONY : Parser.o
+
+# target to build an object file
+Parser.cc.o:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/Parser.cc.o
+.PHONY : Parser.cc.o
+
+Parser.i: Parser.cc.i
+
+.PHONY : Parser.i
+
+# target to preprocess a source file
+Parser.cc.i:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/Parser.cc.i
+.PHONY : Parser.cc.i
+
+Parser.s: Parser.cc.s
+
+.PHONY : Parser.s
+
+# target to generate assembly for a file
+Parser.cc.s:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/Parser.cc.s
+.PHONY : Parser.cc.s
+
+PrototypeAST.o: PrototypeAST.cc.o
+
+.PHONY : PrototypeAST.o
+
+# target to build an object file
+PrototypeAST.cc.o:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/PrototypeAST.cc.o
+.PHONY : PrototypeAST.cc.o
+
+PrototypeAST.i: PrototypeAST.cc.i
+
+.PHONY : PrototypeAST.i
+
+# target to preprocess a source file
+PrototypeAST.cc.i:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/PrototypeAST.cc.i
+.PHONY : PrototypeAST.cc.i
+
+PrototypeAST.s: PrototypeAST.cc.s
+
+.PHONY : PrototypeAST.s
+
+# target to generate assembly for a file
+PrototypeAST.cc.s:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/PrototypeAST.cc.s
+.PHONY : PrototypeAST.cc.s
+
+VariableExprAST.o: VariableExprAST.cc.o
+
+.PHONY : VariableExprAST.o
+
+# target to build an object file
+VariableExprAST.cc.o:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/VariableExprAST.cc.o
+.PHONY : VariableExprAST.cc.o
+
+VariableExprAST.i: VariableExprAST.cc.i
+
+.PHONY : VariableExprAST.i
+
+# target to preprocess a source file
+VariableExprAST.cc.i:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/VariableExprAST.cc.i
+.PHONY : VariableExprAST.cc.i
+
+VariableExprAST.s: VariableExprAST.cc.s
+
+.PHONY : VariableExprAST.s
+
+# target to generate assembly for a file
+VariableExprAST.cc.s:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/VariableExprAST.cc.s
+.PHONY : VariableExprAST.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -173,9 +443,39 @@ help:
 	@echo "... edit_cache"
 	@echo "... Cinderella"
 	@echo "... intrinsics_gen"
+	@echo "... BinaryExprAST.o"
+	@echo "... BinaryExprAST.i"
+	@echo "... BinaryExprAST.s"
+	@echo "... CallExprAST.o"
+	@echo "... CallExprAST.i"
+	@echo "... CallExprAST.s"
+	@echo "... Cinderella.o"
+	@echo "... Cinderella.i"
+	@echo "... Cinderella.s"
+	@echo "... ExprAST.o"
+	@echo "... ExprAST.i"
+	@echo "... ExprAST.s"
+	@echo "... FunctionAST.o"
+	@echo "... FunctionAST.i"
+	@echo "... FunctionAST.s"
+	@echo "... LLVMBinder.o"
+	@echo "... LLVMBinder.i"
+	@echo "... LLVMBinder.s"
 	@echo "... Lexer.o"
 	@echo "... Lexer.i"
 	@echo "... Lexer.s"
+	@echo "... NumberExprAST.o"
+	@echo "... NumberExprAST.i"
+	@echo "... NumberExprAST.s"
+	@echo "... Parser.o"
+	@echo "... Parser.i"
+	@echo "... Parser.s"
+	@echo "... PrototypeAST.o"
+	@echo "... PrototypeAST.i"
+	@echo "... PrototypeAST.s"
+	@echo "... VariableExprAST.o"
+	@echo "... VariableExprAST.i"
+	@echo "... VariableExprAST.s"
 .PHONY : help
 
 
