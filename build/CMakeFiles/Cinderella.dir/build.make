@@ -57,9 +57,22 @@ include CMakeFiles/Cinderella.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Cinderella.dir/flags.make
 
+CMakeFiles/Cinderella.dir/IOInterface.cc.o: CMakeFiles/Cinderella.dir/flags.make
+CMakeFiles/Cinderella.dir/IOInterface.cc.o: ../IOInterface.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Cinderella.dir/IOInterface.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/IOInterface.cc.o -c /Users/jason/Desktop/Repo/Cinderella/IOInterface.cc
+
+CMakeFiles/Cinderella.dir/IOInterface.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Cinderella.dir/IOInterface.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jason/Desktop/Repo/Cinderella/IOInterface.cc > CMakeFiles/Cinderella.dir/IOInterface.cc.i
+
+CMakeFiles/Cinderella.dir/IOInterface.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Cinderella.dir/IOInterface.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jason/Desktop/Repo/Cinderella/IOInterface.cc -o CMakeFiles/Cinderella.dir/IOInterface.cc.s
+
 CMakeFiles/Cinderella.dir/Cinderella.cc.o: CMakeFiles/Cinderella.dir/flags.make
 CMakeFiles/Cinderella.dir/Cinderella.cc.o: ../Cinderella.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Cinderella.dir/Cinderella.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Cinderella.dir/Cinderella.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/Cinderella.cc.o -c /Users/jason/Desktop/Repo/Cinderella/Cinderella.cc
 
 CMakeFiles/Cinderella.dir/Cinderella.cc.i: cmake_force
@@ -72,7 +85,7 @@ CMakeFiles/Cinderella.dir/Cinderella.cc.s: cmake_force
 
 CMakeFiles/Cinderella.dir/Lexer.cc.o: CMakeFiles/Cinderella.dir/flags.make
 CMakeFiles/Cinderella.dir/Lexer.cc.o: ../Lexer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Cinderella.dir/Lexer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Cinderella.dir/Lexer.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/Lexer.cc.o -c /Users/jason/Desktop/Repo/Cinderella/Lexer.cc
 
 CMakeFiles/Cinderella.dir/Lexer.cc.i: cmake_force
@@ -85,7 +98,7 @@ CMakeFiles/Cinderella.dir/Lexer.cc.s: cmake_force
 
 CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o: CMakeFiles/Cinderella.dir/flags.make
 CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o: ../BinaryExprAST.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o -c /Users/jason/Desktop/Repo/Cinderella/BinaryExprAST.cc
 
 CMakeFiles/Cinderella.dir/BinaryExprAST.cc.i: cmake_force
@@ -98,7 +111,7 @@ CMakeFiles/Cinderella.dir/BinaryExprAST.cc.s: cmake_force
 
 CMakeFiles/Cinderella.dir/CallExprAST.cc.o: CMakeFiles/Cinderella.dir/flags.make
 CMakeFiles/Cinderella.dir/CallExprAST.cc.o: ../CallExprAST.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Cinderella.dir/CallExprAST.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Cinderella.dir/CallExprAST.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/CallExprAST.cc.o -c /Users/jason/Desktop/Repo/Cinderella/CallExprAST.cc
 
 CMakeFiles/Cinderella.dir/CallExprAST.cc.i: cmake_force
@@ -111,7 +124,7 @@ CMakeFiles/Cinderella.dir/CallExprAST.cc.s: cmake_force
 
 CMakeFiles/Cinderella.dir/ExprAST.cc.o: CMakeFiles/Cinderella.dir/flags.make
 CMakeFiles/Cinderella.dir/ExprAST.cc.o: ../ExprAST.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Cinderella.dir/ExprAST.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Cinderella.dir/ExprAST.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/ExprAST.cc.o -c /Users/jason/Desktop/Repo/Cinderella/ExprAST.cc
 
 CMakeFiles/Cinderella.dir/ExprAST.cc.i: cmake_force
@@ -124,7 +137,7 @@ CMakeFiles/Cinderella.dir/ExprAST.cc.s: cmake_force
 
 CMakeFiles/Cinderella.dir/FunctionAST.cc.o: CMakeFiles/Cinderella.dir/flags.make
 CMakeFiles/Cinderella.dir/FunctionAST.cc.o: ../FunctionAST.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Cinderella.dir/FunctionAST.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Cinderella.dir/FunctionAST.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/FunctionAST.cc.o -c /Users/jason/Desktop/Repo/Cinderella/FunctionAST.cc
 
 CMakeFiles/Cinderella.dir/FunctionAST.cc.i: cmake_force
@@ -137,7 +150,7 @@ CMakeFiles/Cinderella.dir/FunctionAST.cc.s: cmake_force
 
 CMakeFiles/Cinderella.dir/LLVMBinder.cc.o: CMakeFiles/Cinderella.dir/flags.make
 CMakeFiles/Cinderella.dir/LLVMBinder.cc.o: ../LLVMBinder.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Cinderella.dir/LLVMBinder.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Cinderella.dir/LLVMBinder.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/LLVMBinder.cc.o -c /Users/jason/Desktop/Repo/Cinderella/LLVMBinder.cc
 
 CMakeFiles/Cinderella.dir/LLVMBinder.cc.i: cmake_force
@@ -150,7 +163,7 @@ CMakeFiles/Cinderella.dir/LLVMBinder.cc.s: cmake_force
 
 CMakeFiles/Cinderella.dir/NumberExprAST.cc.o: CMakeFiles/Cinderella.dir/flags.make
 CMakeFiles/Cinderella.dir/NumberExprAST.cc.o: ../NumberExprAST.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Cinderella.dir/NumberExprAST.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Cinderella.dir/NumberExprAST.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/NumberExprAST.cc.o -c /Users/jason/Desktop/Repo/Cinderella/NumberExprAST.cc
 
 CMakeFiles/Cinderella.dir/NumberExprAST.cc.i: cmake_force
@@ -163,7 +176,7 @@ CMakeFiles/Cinderella.dir/NumberExprAST.cc.s: cmake_force
 
 CMakeFiles/Cinderella.dir/Parser.cc.o: CMakeFiles/Cinderella.dir/flags.make
 CMakeFiles/Cinderella.dir/Parser.cc.o: ../Parser.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Cinderella.dir/Parser.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Cinderella.dir/Parser.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/Parser.cc.o -c /Users/jason/Desktop/Repo/Cinderella/Parser.cc
 
 CMakeFiles/Cinderella.dir/Parser.cc.i: cmake_force
@@ -176,7 +189,7 @@ CMakeFiles/Cinderella.dir/Parser.cc.s: cmake_force
 
 CMakeFiles/Cinderella.dir/PrototypeAST.cc.o: CMakeFiles/Cinderella.dir/flags.make
 CMakeFiles/Cinderella.dir/PrototypeAST.cc.o: ../PrototypeAST.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Cinderella.dir/PrototypeAST.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Cinderella.dir/PrototypeAST.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/PrototypeAST.cc.o -c /Users/jason/Desktop/Repo/Cinderella/PrototypeAST.cc
 
 CMakeFiles/Cinderella.dir/PrototypeAST.cc.i: cmake_force
@@ -189,7 +202,7 @@ CMakeFiles/Cinderella.dir/PrototypeAST.cc.s: cmake_force
 
 CMakeFiles/Cinderella.dir/VariableExprAST.cc.o: CMakeFiles/Cinderella.dir/flags.make
 CMakeFiles/Cinderella.dir/VariableExprAST.cc.o: ../VariableExprAST.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Cinderella.dir/VariableExprAST.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Cinderella.dir/VariableExprAST.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Cinderella.dir/VariableExprAST.cc.o -c /Users/jason/Desktop/Repo/Cinderella/VariableExprAST.cc
 
 CMakeFiles/Cinderella.dir/VariableExprAST.cc.i: cmake_force
@@ -202,6 +215,7 @@ CMakeFiles/Cinderella.dir/VariableExprAST.cc.s: cmake_force
 
 # Object files for target Cinderella
 Cinderella_OBJECTS = \
+"CMakeFiles/Cinderella.dir/IOInterface.cc.o" \
 "CMakeFiles/Cinderella.dir/Cinderella.cc.o" \
 "CMakeFiles/Cinderella.dir/Lexer.cc.o" \
 "CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o" \
@@ -217,6 +231,7 @@ Cinderella_OBJECTS = \
 # External object files for target Cinderella
 Cinderella_EXTERNAL_OBJECTS =
 
+Cinderella: CMakeFiles/Cinderella.dir/IOInterface.cc.o
 Cinderella: CMakeFiles/Cinderella.dir/Cinderella.cc.o
 Cinderella: CMakeFiles/Cinderella.dir/Lexer.cc.o
 Cinderella: CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o
@@ -229,10 +244,76 @@ Cinderella: CMakeFiles/Cinderella.dir/Parser.cc.o
 Cinderella: CMakeFiles/Cinderella.dir/PrototypeAST.cc.o
 Cinderella: CMakeFiles/Cinderella.dir/VariableExprAST.cc.o
 Cinderella: CMakeFiles/Cinderella.dir/build.make
-Cinderella: ../llvm/build/lib/libLLVMCore.a
-Cinderella: ../llvm/build/lib/libLLVMMCJIT.a
-Cinderella: ../llvm/build/lib/libLLVMSupport.a
-Cinderella: ../llvm/build/lib/libLLVMIRReader.a
+Cinderella: ../llvm/build/lib/libLLVMAArch64CodeGen.a
+Cinderella: ../llvm/build/lib/libLLVMAArch64AsmParser.a
+Cinderella: ../llvm/build/lib/libLLVMAArch64AsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMAArch64Desc.a
+Cinderella: ../llvm/build/lib/libLLVMAArch64Disassembler.a
+Cinderella: ../llvm/build/lib/libLLVMAArch64Info.a
+Cinderella: ../llvm/build/lib/libLLVMAArch64Utils.a
+Cinderella: ../llvm/build/lib/libLLVMAMDGPUCodeGen.a
+Cinderella: ../llvm/build/lib/libLLVMAMDGPUAsmParser.a
+Cinderella: ../llvm/build/lib/libLLVMAMDGPUAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMAMDGPUDesc.a
+Cinderella: ../llvm/build/lib/libLLVMAMDGPUDisassembler.a
+Cinderella: ../llvm/build/lib/libLLVMAMDGPUInfo.a
+Cinderella: ../llvm/build/lib/libLLVMAMDGPUUtils.a
+Cinderella: ../llvm/build/lib/libLLVMARMCodeGen.a
+Cinderella: ../llvm/build/lib/libLLVMARMAsmParser.a
+Cinderella: ../llvm/build/lib/libLLVMARMAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMARMDesc.a
+Cinderella: ../llvm/build/lib/libLLVMARMDisassembler.a
+Cinderella: ../llvm/build/lib/libLLVMARMInfo.a
+Cinderella: ../llvm/build/lib/libLLVMARMUtils.a
+Cinderella: ../llvm/build/lib/libLLVMBPFCodeGen.a
+Cinderella: ../llvm/build/lib/libLLVMBPFAsmParser.a
+Cinderella: ../llvm/build/lib/libLLVMBPFAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMBPFDesc.a
+Cinderella: ../llvm/build/lib/libLLVMBPFDisassembler.a
+Cinderella: ../llvm/build/lib/libLLVMBPFInfo.a
+Cinderella: ../llvm/build/lib/libLLVMHexagonCodeGen.a
+Cinderella: ../llvm/build/lib/libLLVMHexagonAsmParser.a
+Cinderella: ../llvm/build/lib/libLLVMHexagonDesc.a
+Cinderella: ../llvm/build/lib/libLLVMHexagonDisassembler.a
+Cinderella: ../llvm/build/lib/libLLVMHexagonInfo.a
+Cinderella: ../llvm/build/lib/libLLVMLanaiCodeGen.a
+Cinderella: ../llvm/build/lib/libLLVMLanaiAsmParser.a
+Cinderella: ../llvm/build/lib/libLLVMLanaiAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMLanaiDesc.a
+Cinderella: ../llvm/build/lib/libLLVMLanaiDisassembler.a
+Cinderella: ../llvm/build/lib/libLLVMLanaiInfo.a
+Cinderella: ../llvm/build/lib/libLLVMMipsCodeGen.a
+Cinderella: ../llvm/build/lib/libLLVMMipsAsmParser.a
+Cinderella: ../llvm/build/lib/libLLVMMipsAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMMipsDesc.a
+Cinderella: ../llvm/build/lib/libLLVMMipsDisassembler.a
+Cinderella: ../llvm/build/lib/libLLVMMipsInfo.a
+Cinderella: ../llvm/build/lib/libLLVMMSP430CodeGen.a
+Cinderella: ../llvm/build/lib/libLLVMMSP430AsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMMSP430Desc.a
+Cinderella: ../llvm/build/lib/libLLVMMSP430Info.a
+Cinderella: ../llvm/build/lib/libLLVMNVPTXCodeGen.a
+Cinderella: ../llvm/build/lib/libLLVMNVPTXAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMNVPTXDesc.a
+Cinderella: ../llvm/build/lib/libLLVMNVPTXInfo.a
+Cinderella: ../llvm/build/lib/libLLVMPowerPCCodeGen.a
+Cinderella: ../llvm/build/lib/libLLVMPowerPCAsmParser.a
+Cinderella: ../llvm/build/lib/libLLVMPowerPCAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMPowerPCDesc.a
+Cinderella: ../llvm/build/lib/libLLVMPowerPCDisassembler.a
+Cinderella: ../llvm/build/lib/libLLVMPowerPCInfo.a
+Cinderella: ../llvm/build/lib/libLLVMSparcCodeGen.a
+Cinderella: ../llvm/build/lib/libLLVMSparcAsmParser.a
+Cinderella: ../llvm/build/lib/libLLVMSparcAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMSparcDesc.a
+Cinderella: ../llvm/build/lib/libLLVMSparcDisassembler.a
+Cinderella: ../llvm/build/lib/libLLVMSparcInfo.a
+Cinderella: ../llvm/build/lib/libLLVMSystemZCodeGen.a
+Cinderella: ../llvm/build/lib/libLLVMSystemZAsmParser.a
+Cinderella: ../llvm/build/lib/libLLVMSystemZAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMSystemZDesc.a
+Cinderella: ../llvm/build/lib/libLLVMSystemZDisassembler.a
+Cinderella: ../llvm/build/lib/libLLVMSystemZInfo.a
 Cinderella: ../llvm/build/lib/libLLVMX86CodeGen.a
 Cinderella: ../llvm/build/lib/libLLVMX86AsmParser.a
 Cinderella: ../llvm/build/lib/libLLVMX86AsmPrinter.a
@@ -240,35 +321,70 @@ Cinderella: ../llvm/build/lib/libLLVMX86Desc.a
 Cinderella: ../llvm/build/lib/libLLVMX86Disassembler.a
 Cinderella: ../llvm/build/lib/libLLVMX86Info.a
 Cinderella: ../llvm/build/lib/libLLVMX86Utils.a
-Cinderella: ../llvm/build/lib/libLLVMExecutionEngine.a
-Cinderella: ../llvm/build/lib/libLLVMRuntimeDyld.a
+Cinderella: ../llvm/build/lib/libLLVMXCoreCodeGen.a
+Cinderella: ../llvm/build/lib/libLLVMXCoreAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMXCoreDesc.a
+Cinderella: ../llvm/build/lib/libLLVMXCoreDisassembler.a
+Cinderella: ../llvm/build/lib/libLLVMXCoreInfo.a
+Cinderella: ../llvm/build/lib/libLLVMAArch64Desc.a
+Cinderella: ../llvm/build/lib/libLLVMAArch64AsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMAArch64Info.a
+Cinderella: ../llvm/build/lib/libLLVMAArch64Utils.a
+Cinderella: ../llvm/build/lib/libLLVMAMDGPUDesc.a
+Cinderella: ../llvm/build/lib/libLLVMAMDGPUAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMAMDGPUInfo.a
+Cinderella: ../llvm/build/lib/libLLVMAMDGPUUtils.a
+Cinderella: ../llvm/build/lib/libLLVMARMDesc.a
+Cinderella: ../llvm/build/lib/libLLVMARMAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMARMUtils.a
+Cinderella: ../llvm/build/lib/libLLVMARMInfo.a
+Cinderella: ../llvm/build/lib/libLLVMBPFAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMHexagonDesc.a
+Cinderella: ../llvm/build/lib/libLLVMHexagonInfo.a
+Cinderella: ../llvm/build/lib/libLLVMLanaiDesc.a
+Cinderella: ../llvm/build/lib/libLLVMLanaiAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMLanaiInfo.a
+Cinderella: ../llvm/build/lib/libLLVMMipsAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMMSP430AsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMNVPTXAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMipo.a
+Cinderella: ../llvm/build/lib/libLLVMVectorize.a
+Cinderella: ../llvm/build/lib/libLLVMIRReader.a
 Cinderella: ../llvm/build/lib/libLLVMAsmParser.a
+Cinderella: ../llvm/build/lib/libLLVMInstrumentation.a
+Cinderella: ../llvm/build/lib/libLLVMLinker.a
+Cinderella: ../llvm/build/lib/libLLVMPowerPCAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMSparcAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMSystemZDesc.a
+Cinderella: ../llvm/build/lib/libLLVMSystemZAsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMSystemZInfo.a
+Cinderella: ../llvm/build/lib/libLLVMGlobalISel.a
+Cinderella: ../llvm/build/lib/libLLVMX86AsmPrinter.a
+Cinderella: ../llvm/build/lib/libLLVMX86Utils.a
+Cinderella: ../llvm/build/lib/libLLVMXCoreAsmPrinter.a
 Cinderella: ../llvm/build/lib/libLLVMAsmPrinter.a
 Cinderella: ../llvm/build/lib/libLLVMDebugInfoCodeView.a
 Cinderella: ../llvm/build/lib/libLLVMDebugInfoMSF.a
-Cinderella: ../llvm/build/lib/libLLVMGlobalISel.a
 Cinderella: ../llvm/build/lib/libLLVMSelectionDAG.a
 Cinderella: ../llvm/build/lib/libLLVMCodeGen.a
-Cinderella: ../llvm/build/lib/libLLVMTarget.a
-Cinderella: ../llvm/build/lib/libLLVMBitWriter.a
 Cinderella: ../llvm/build/lib/libLLVMScalarOpts.a
 Cinderella: ../llvm/build/lib/libLLVMInstCombine.a
+Cinderella: ../llvm/build/lib/libLLVMBitWriter.a
+Cinderella: ../llvm/build/lib/libLLVMTarget.a
 Cinderella: ../llvm/build/lib/libLLVMTransformUtils.a
 Cinderella: ../llvm/build/lib/libLLVMAnalysis.a
-Cinderella: ../llvm/build/lib/libLLVMProfileData.a
-Cinderella: ../llvm/build/lib/libLLVMX86AsmPrinter.a
-Cinderella: ../llvm/build/lib/libLLVMX86Utils.a
 Cinderella: ../llvm/build/lib/libLLVMObject.a
+Cinderella: ../llvm/build/lib/libLLVMMCParser.a
 Cinderella: ../llvm/build/lib/libLLVMBitReader.a
+Cinderella: ../llvm/build/lib/libLLVMProfileData.a
 Cinderella: ../llvm/build/lib/libLLVMCore.a
 Cinderella: ../llvm/build/lib/libLLVMBinaryFormat.a
-Cinderella: ../llvm/build/lib/libLLVMMCParser.a
 Cinderella: ../llvm/build/lib/libLLVMMCDisassembler.a
 Cinderella: ../llvm/build/lib/libLLVMMC.a
 Cinderella: ../llvm/build/lib/libLLVMSupport.a
 Cinderella: ../llvm/build/lib/libLLVMDemangle.a
 Cinderella: CMakeFiles/Cinderella.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable Cinderella"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jason/Desktop/Repo/Cinderella/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable Cinderella"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Cinderella.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

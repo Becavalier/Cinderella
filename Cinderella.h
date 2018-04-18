@@ -3,6 +3,7 @@
 #include "Lexer.h"
 #include "Parser.h"
 #include "LLVMBinder.h"
+#include "IOInterface.h"
 #include <cstdio>
 #include <map>
 #include "llvm/IR/Value.h"
@@ -13,6 +14,29 @@
 
 class Cinderella {
     Cinderella() {}
+
+private:
+    static void processSequenceCore () {
+        switch (Lexer::CurTok) {
+            case tok_eof:
+                return;
+            case ';':
+                std::fprintf(stderr, "Cinderella Compiler CLI> ");
+                Lexer::GetNextToken();
+                // Re-Parsing;
+                processSequenceCore();
+                break;  // ignore top-level semicolons.
+            case tok_def:
+                HandleDefinition();
+                break;
+            case tok_extern:
+                HandleExtern();
+                break;
+            default:
+                HandleTopLevelExpression();
+                break;
+        }
+    }
 
 public:
     // Handler
@@ -60,24 +84,16 @@ public:
     // Main processing loop;
     static void MainCLILoop() {
         while (1) {
-            std::fprintf(stderr, "Cinderella Compiler CLI> ");
-            switch (Lexer::CurTok) {
-                case tok_eof:
-                    return;
-                case ';':
-                    Lexer::GetNextToken();
-                    break;  // ignore top-level semicolons.
-                case tok_def:
-                    HandleDefinition();
-                    break;
-                case tok_extern:
-                    HandleExtern();
-                    break;
-                default:
-                    HandleTopLevelExpression();
-                    break;
-            }
+            processSequenceCore();
         }
     }
+
+    static void MainStatic(const std::string &fileName) {
+        // Set pre-payload of source code into memory;
+        IOInterface::InitialBufferPayload(fileName);
+
+        processSequenceCore();
+    }
+
 };
 

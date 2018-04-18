@@ -33,12 +33,12 @@ include_directories("${PROJECT_SOURCE_DIR}/llvm/build/include")
 
 
 # Add the executable;
-add_executable(Cinderella Cinderella.cc Cinderella.h Lexer.cc Lexer.h BinaryExprAST.cc BinaryExprAST.h CallExprAST.cc CallExprAST.h
+add_executable(Cinderella IOInterface.cc IOInterface.h Cinderella.cc Cinderella.h Lexer.cc Lexer.h BinaryExprAST.cc BinaryExprAST.h CallExprAST.cc CallExprAST.h
         ExprAST.cc ExprAST.h FunctionAST.cc FunctionAST.h LLVMBinder.cc LLVMBinder.h NumberExprAST.cc NumberExprAST.h Parser.h Parser.cc
         PrototypeAST.cc PrototypeAST.h VariableExprAST.cc VariableExprAST.h)
 
-# Find the libraries that correspond to the LLVM components that we wish to use;
-llvm_map_components_to_libnames(llvm_libs core native mcjit support irreader)
+# Find the libraries that correspond to the LLVM components that we wish to use (all);
+llvm_map_components_to_libnames(llvm_libs ${LLVM_TARGETS_TO_BUILD})
 
 # Link against LLVM libraries
 target_link_libraries(Cinderella ${llvm_libs})

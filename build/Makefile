@@ -271,6 +271,33 @@ FunctionAST.cc.s:
 	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/FunctionAST.cc.s
 .PHONY : FunctionAST.cc.s
 
+IOInterface.o: IOInterface.cc.o
+
+.PHONY : IOInterface.o
+
+# target to build an object file
+IOInterface.cc.o:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/IOInterface.cc.o
+.PHONY : IOInterface.cc.o
+
+IOInterface.i: IOInterface.cc.i
+
+.PHONY : IOInterface.i
+
+# target to preprocess a source file
+IOInterface.cc.i:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/IOInterface.cc.i
+.PHONY : IOInterface.cc.i
+
+IOInterface.s: IOInterface.cc.s
+
+.PHONY : IOInterface.s
+
+# target to generate assembly for a file
+IOInterface.cc.s:
+	$(MAKE) -f CMakeFiles/Cinderella.dir/build.make CMakeFiles/Cinderella.dir/IOInterface.cc.s
+.PHONY : IOInterface.cc.s
+
 LLVMBinder.o: LLVMBinder.cc.o
 
 .PHONY : LLVMBinder.o
@@ -458,6 +485,9 @@ help:
 	@echo "... FunctionAST.o"
 	@echo "... FunctionAST.i"
 	@echo "... FunctionAST.s"
+	@echo "... IOInterface.o"
+	@echo "... IOInterface.i"
+	@echo "... IOInterface.s"
 	@echo "... LLVMBinder.o"
 	@echo "... LLVMBinder.i"
 	@echo "... LLVMBinder.s"

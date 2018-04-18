@@ -13,7 +13,9 @@ std::unique_ptr<llvm::Module> LLVMBinder::TheModule;
 
 std::unique_ptr<llvm::legacy::FunctionPassManager> LLVMBinder::TheFPM;
 
+
 int main(int argc, char* args[]) {
+
     // Set precedence list;
     Lexer::BinopPrecedence['<'] = 10;
     Lexer::BinopPrecedence['+'] = 20;
@@ -21,10 +23,7 @@ int main(int argc, char* args[]) {
     Lexer::BinopPrecedence['*'] = 40;
 
 
-    // Prime the first token.
-    fprintf(stderr, "ready> ");
-    Lexer::GetNextToken();
-
+    // Get current module;
     LLVMBinder::TheModule = llvm::make_unique<llvm::Module>("Cinderella", LLVMBinder::TheContext);
 
     // Create a new pass manager attached to it.
@@ -33,11 +32,34 @@ int main(int argc, char* args[]) {
     // Make the module, which holds all the code.
     LLVMBinder::wrapLLVMOptimizers();
 
-    // Dealing with inputs;
-    Cinderella::MainCLILoop();
+    if (argc > 1) {
+        std::string executeMode(args[1]);
+        if (executeMode == "-o") {
+            std::string oFile(args[2]);
+            std::string iFile(args[3]);
+            // Dealing with the first section (seperated by ";");
+            Cinderella::MainStatic(iFile);
+
+            bool saved = LLVMBinder::generateTargetObjectFile(oFile);
+            cout << (saved ? "Object file saved succeed!" : "Object file saved failed!") << endl;
+        } else {
+            // Prime the first token.
+            fprintf(stderr, "Cinderella Compiler CLI> ");
+            Lexer::GetNextToken();
+
+            // Dealing with inputs;
+            Cinderella::MainCLILoop();
+        }
+    } else {// Prime the first token.
+        fprintf(stderr, "Cinderella Compiler CLI> ");
+        Lexer::GetNextToken();
+
+        // Dealing with inputs;
+        Cinderella::MainCLILoop();
+    }
 
     // Print out all of the generated code.
-    LLVMBinder::TheModule->print(llvm::errs(), nullptr);
+    // LLVMBinder::TheModule->print(llvm::errs(), nullptr);
 
     return 0;
 }

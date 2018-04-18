@@ -26,7 +26,11 @@ cd build && cmake .. && make
 cd build && cmake .. && make
 ```
 
-#### 3、Run:
-```commandline
+#### 3、Run Compiler in Command Line:
+```commandline 
+# Command line mode;
 ./Cinderella
+
+# Compiling mode (try build/sources);
+./Cinderella -o <dist.o> <source.hs>
 ```

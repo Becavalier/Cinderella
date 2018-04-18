@@ -6,18 +6,19 @@ char Lexer::CurTok = ';';
 
 // the implementation of "_find_token()"
 int Lexer::_find_token() {
+
     static int LastChar = ' ';
 
     // skip spaces;
     while(isspace(LastChar)) {
-        LastChar = getchar();
+        LastChar = IOInterface::ReadCharacterSource();
     }
 
     // identifier for style like: [a-zA-Z][a-zA-Z0-9]*;
     if (isalpha(LastChar)) {
         Lexer::IdentifierStr = LastChar;
         // alphanumeric condition;
-        while (isalnum((LastChar = getchar()))) {
+        while (isalnum((LastChar = IOInterface::ReadCharacterSource()))) {
             Lexer::IdentifierStr += LastChar;
         }
 
@@ -35,7 +36,7 @@ int Lexer::_find_token() {
         std::string NumStr;
         do {
             NumStr += LastChar;
-            LastChar = getchar();
+            LastChar = IOInterface::ReadCharacterSource();
         } while (isdigit(LastChar) || LastChar == '.');
 
         // convert a string to double
@@ -45,7 +46,7 @@ int Lexer::_find_token() {
 
     if (LastChar == '#') {
         // comment until end of line.
-        do LastChar = getchar();
+        do LastChar = IOInterface::ReadCharacterSource();
         while (LastChar != EOF && LastChar != '\n' && LastChar != '\r');
 
         if (LastChar != EOF)
@@ -58,6 +59,6 @@ int Lexer::_find_token() {
 
     // otherwise, just return the character as its ascii value.
     int ThisChar = LastChar;
-    LastChar = getchar();
+    LastChar = IOInterface::ReadCharacterSource();
     return ThisChar;
 }

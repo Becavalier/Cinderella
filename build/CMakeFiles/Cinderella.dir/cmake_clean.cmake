@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Cinderella.dir/IOInterface.cc.o"
   "CMakeFiles/Cinderella.dir/Cinderella.cc.o"
   "CMakeFiles/Cinderella.dir/Lexer.cc.o"
   "CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o"
