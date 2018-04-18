@@ -14,19 +14,28 @@ CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o
  ../llvm/include/llvm/ADT/DenseMap.h
  ../llvm/include/llvm/ADT/DenseMapInfo.h
  ../llvm/include/llvm/ADT/DenseSet.h
+ ../llvm/include/llvm/ADT/DepthFirstIterator.h
  ../llvm/include/llvm/ADT/EpochTracker.h
  ../llvm/include/llvm/ADT/FoldingSet.h
+ ../llvm/include/llvm/ADT/GraphTraits.h
  ../llvm/include/llvm/ADT/Hashing.h
+ ../llvm/include/llvm/ADT/MapVector.h
  ../llvm/include/llvm/ADT/None.h
  ../llvm/include/llvm/ADT/Optional.h
+ ../llvm/include/llvm/ADT/PointerEmbeddedInt.h
  ../llvm/include/llvm/ADT/PointerIntPair.h
+ ../llvm/include/llvm/ADT/PointerSumType.h
  ../llvm/include/llvm/ADT/PointerUnion.h
+ ../llvm/include/llvm/ADT/PostOrderIterator.h
  ../llvm/include/llvm/ADT/STLExtras.h
+ ../llvm/include/llvm/ADT/SetVector.h
  ../llvm/include/llvm/ADT/SmallPtrSet.h
  ../llvm/include/llvm/ADT/SmallString.h
  ../llvm/include/llvm/ADT/SmallVector.h
  ../llvm/include/llvm/ADT/StringMap.h
  ../llvm/include/llvm/ADT/StringRef.h
+ ../llvm/include/llvm/ADT/TinyPtrVector.h
+ ../llvm/include/llvm/ADT/Triple.h
  ../llvm/include/llvm/ADT/Twine.h
  ../llvm/include/llvm/ADT/ilist.h
  ../llvm/include/llvm/ADT/ilist_base.h
@@ -37,9 +46,17 @@ CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o
  ../llvm/include/llvm/ADT/iterator.h
  ../llvm/include/llvm/ADT/iterator_range.h
  ../llvm/include/llvm/ADT/simple_ilist.h
+ ../llvm/include/llvm/Analysis/AliasAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryDependenceAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryLocation.h
+ ../llvm/include/llvm/Analysis/OrderedBasicBlock.h
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.def
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.h
  ../llvm/include/llvm/IR/Argument.h
  ../llvm/include/llvm/IR/Attributes.h
  ../llvm/include/llvm/IR/BasicBlock.h
+ ../llvm/include/llvm/IR/CFG.h
+ ../llvm/include/llvm/IR/CallSite.h
  ../llvm/include/llvm/IR/CallingConv.h
  ../llvm/include/llvm/IR/Comdat.h
  ../llvm/include/llvm/IR/Constant.h
@@ -49,6 +66,7 @@ CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o
  ../llvm/include/llvm/IR/DebugLoc.h
  ../llvm/include/llvm/IR/DerivedTypes.h
  ../llvm/include/llvm/IR/DiagnosticHandler.h
+ ../llvm/include/llvm/IR/Dominators.h
  ../llvm/include/llvm/IR/Function.h
  ../llvm/include/llvm/IR/GlobalAlias.h
  ../llvm/include/llvm/IR/GlobalIFunc.h
@@ -63,11 +81,15 @@ CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o
  ../llvm/include/llvm/IR/Instructions.h
  ../llvm/include/llvm/IR/Intrinsics.h
  ../llvm/include/llvm/IR/LLVMContext.h
+ ../llvm/include/llvm/IR/LegacyPassManager.h
  ../llvm/include/llvm/IR/Metadata.def
  ../llvm/include/llvm/IR/Metadata.h
  ../llvm/include/llvm/IR/Module.h
  ../llvm/include/llvm/IR/OperandTraits.h
  ../llvm/include/llvm/IR/Operator.h
+ ../llvm/include/llvm/IR/PassManager.h
+ ../llvm/include/llvm/IR/PassManagerInternal.h
+ ../llvm/include/llvm/IR/PredIteratorCache.h
  ../llvm/include/llvm/IR/SymbolTableListTraits.h
  ../llvm/include/llvm/IR/TrackingMDRef.h
  ../llvm/include/llvm/IR/Type.h
@@ -91,8 +113,10 @@ CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o
  ../llvm/include/llvm/Support/CodeGen.h
  ../llvm/include/llvm/Support/CommandLine.h
  ../llvm/include/llvm/Support/Compiler.h
+ ../llvm/include/llvm/Support/Debug.h
  ../llvm/include/llvm/Support/Endian.h
  ../llvm/include/llvm/Support/ErrorHandling.h
+ ../llvm/include/llvm/Support/GenericDomTree.h
  ../llvm/include/llvm/Support/Host.h
  ../llvm/include/llvm/Support/MD5.h
  ../llvm/include/llvm/Support/ManagedStatic.h
@@ -103,7 +127,12 @@ CMakeFiles/Cinderella.dir/BinaryExprAST.cc.o
  ../llvm/include/llvm/Support/ReverseIteration.h
  ../llvm/include/llvm/Support/SwapByteOrder.h
  ../llvm/include/llvm/Support/Threading.h
+ ../llvm/include/llvm/Support/TypeName.h
+ ../llvm/include/llvm/Support/raw_ostream.h
  ../llvm/include/llvm/Support/type_traits.h
+ ../llvm/include/llvm/Transforms/Scalar.h
+ ../llvm/include/llvm/Transforms/Scalar/GVN.h
+ ../llvm/include/llvm/Transforms/Utils/OrderedInstructions.h
  /Users/jason/Desktop/Repo/Cinderella/BinaryExprAST.cc
  /Users/jason/Desktop/Repo/Cinderella/BinaryExprAST.h
  /Users/jason/Desktop/Repo/Cinderella/ExprAST.h
@@ -122,19 +151,28 @@ CMakeFiles/Cinderella.dir/CallExprAST.cc.o
  ../llvm/include/llvm/ADT/DenseMap.h
  ../llvm/include/llvm/ADT/DenseMapInfo.h
  ../llvm/include/llvm/ADT/DenseSet.h
+ ../llvm/include/llvm/ADT/DepthFirstIterator.h
  ../llvm/include/llvm/ADT/EpochTracker.h
  ../llvm/include/llvm/ADT/FoldingSet.h
+ ../llvm/include/llvm/ADT/GraphTraits.h
  ../llvm/include/llvm/ADT/Hashing.h
+ ../llvm/include/llvm/ADT/MapVector.h
  ../llvm/include/llvm/ADT/None.h
  ../llvm/include/llvm/ADT/Optional.h
+ ../llvm/include/llvm/ADT/PointerEmbeddedInt.h
  ../llvm/include/llvm/ADT/PointerIntPair.h
+ ../llvm/include/llvm/ADT/PointerSumType.h
  ../llvm/include/llvm/ADT/PointerUnion.h
+ ../llvm/include/llvm/ADT/PostOrderIterator.h
  ../llvm/include/llvm/ADT/STLExtras.h
+ ../llvm/include/llvm/ADT/SetVector.h
  ../llvm/include/llvm/ADT/SmallPtrSet.h
  ../llvm/include/llvm/ADT/SmallString.h
  ../llvm/include/llvm/ADT/SmallVector.h
  ../llvm/include/llvm/ADT/StringMap.h
  ../llvm/include/llvm/ADT/StringRef.h
+ ../llvm/include/llvm/ADT/TinyPtrVector.h
+ ../llvm/include/llvm/ADT/Triple.h
  ../llvm/include/llvm/ADT/Twine.h
  ../llvm/include/llvm/ADT/ilist.h
  ../llvm/include/llvm/ADT/ilist_base.h
@@ -145,9 +183,17 @@ CMakeFiles/Cinderella.dir/CallExprAST.cc.o
  ../llvm/include/llvm/ADT/iterator.h
  ../llvm/include/llvm/ADT/iterator_range.h
  ../llvm/include/llvm/ADT/simple_ilist.h
+ ../llvm/include/llvm/Analysis/AliasAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryDependenceAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryLocation.h
+ ../llvm/include/llvm/Analysis/OrderedBasicBlock.h
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.def
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.h
  ../llvm/include/llvm/IR/Argument.h
  ../llvm/include/llvm/IR/Attributes.h
  ../llvm/include/llvm/IR/BasicBlock.h
+ ../llvm/include/llvm/IR/CFG.h
+ ../llvm/include/llvm/IR/CallSite.h
  ../llvm/include/llvm/IR/CallingConv.h
  ../llvm/include/llvm/IR/Comdat.h
  ../llvm/include/llvm/IR/Constant.h
@@ -157,6 +203,7 @@ CMakeFiles/Cinderella.dir/CallExprAST.cc.o
  ../llvm/include/llvm/IR/DebugLoc.h
  ../llvm/include/llvm/IR/DerivedTypes.h
  ../llvm/include/llvm/IR/DiagnosticHandler.h
+ ../llvm/include/llvm/IR/Dominators.h
  ../llvm/include/llvm/IR/Function.h
  ../llvm/include/llvm/IR/GlobalAlias.h
  ../llvm/include/llvm/IR/GlobalIFunc.h
@@ -171,11 +218,15 @@ CMakeFiles/Cinderella.dir/CallExprAST.cc.o
  ../llvm/include/llvm/IR/Instructions.h
  ../llvm/include/llvm/IR/Intrinsics.h
  ../llvm/include/llvm/IR/LLVMContext.h
+ ../llvm/include/llvm/IR/LegacyPassManager.h
  ../llvm/include/llvm/IR/Metadata.def
  ../llvm/include/llvm/IR/Metadata.h
  ../llvm/include/llvm/IR/Module.h
  ../llvm/include/llvm/IR/OperandTraits.h
  ../llvm/include/llvm/IR/Operator.h
+ ../llvm/include/llvm/IR/PassManager.h
+ ../llvm/include/llvm/IR/PassManagerInternal.h
+ ../llvm/include/llvm/IR/PredIteratorCache.h
  ../llvm/include/llvm/IR/SymbolTableListTraits.h
  ../llvm/include/llvm/IR/TrackingMDRef.h
  ../llvm/include/llvm/IR/Type.h
@@ -199,8 +250,10 @@ CMakeFiles/Cinderella.dir/CallExprAST.cc.o
  ../llvm/include/llvm/Support/CodeGen.h
  ../llvm/include/llvm/Support/CommandLine.h
  ../llvm/include/llvm/Support/Compiler.h
+ ../llvm/include/llvm/Support/Debug.h
  ../llvm/include/llvm/Support/Endian.h
  ../llvm/include/llvm/Support/ErrorHandling.h
+ ../llvm/include/llvm/Support/GenericDomTree.h
  ../llvm/include/llvm/Support/Host.h
  ../llvm/include/llvm/Support/MD5.h
  ../llvm/include/llvm/Support/ManagedStatic.h
@@ -211,7 +264,12 @@ CMakeFiles/Cinderella.dir/CallExprAST.cc.o
  ../llvm/include/llvm/Support/ReverseIteration.h
  ../llvm/include/llvm/Support/SwapByteOrder.h
  ../llvm/include/llvm/Support/Threading.h
+ ../llvm/include/llvm/Support/TypeName.h
+ ../llvm/include/llvm/Support/raw_ostream.h
  ../llvm/include/llvm/Support/type_traits.h
+ ../llvm/include/llvm/Transforms/Scalar.h
+ ../llvm/include/llvm/Transforms/Scalar/GVN.h
+ ../llvm/include/llvm/Transforms/Utils/OrderedInstructions.h
  /Users/jason/Desktop/Repo/Cinderella/CallExprAST.cc
  /Users/jason/Desktop/Repo/Cinderella/CallExprAST.h
  /Users/jason/Desktop/Repo/Cinderella/ExprAST.h
@@ -230,20 +288,28 @@ CMakeFiles/Cinderella.dir/Cinderella.cc.o
  ../llvm/include/llvm/ADT/DenseMap.h
  ../llvm/include/llvm/ADT/DenseMapInfo.h
  ../llvm/include/llvm/ADT/DenseSet.h
+ ../llvm/include/llvm/ADT/DepthFirstIterator.h
  ../llvm/include/llvm/ADT/EpochTracker.h
  ../llvm/include/llvm/ADT/FoldingSet.h
+ ../llvm/include/llvm/ADT/GraphTraits.h
  ../llvm/include/llvm/ADT/Hashing.h
+ ../llvm/include/llvm/ADT/MapVector.h
  ../llvm/include/llvm/ADT/None.h
  ../llvm/include/llvm/ADT/Optional.h
+ ../llvm/include/llvm/ADT/PointerEmbeddedInt.h
  ../llvm/include/llvm/ADT/PointerIntPair.h
+ ../llvm/include/llvm/ADT/PointerSumType.h
  ../llvm/include/llvm/ADT/PointerUnion.h
+ ../llvm/include/llvm/ADT/PostOrderIterator.h
  ../llvm/include/llvm/ADT/STLExtras.h
+ ../llvm/include/llvm/ADT/SetVector.h
  ../llvm/include/llvm/ADT/SmallPtrSet.h
  ../llvm/include/llvm/ADT/SmallString.h
  ../llvm/include/llvm/ADT/SmallVector.h
  ../llvm/include/llvm/ADT/StringMap.h
  ../llvm/include/llvm/ADT/StringRef.h
  ../llvm/include/llvm/ADT/TinyPtrVector.h
+ ../llvm/include/llvm/ADT/Triple.h
  ../llvm/include/llvm/ADT/Twine.h
  ../llvm/include/llvm/ADT/ilist.h
  ../llvm/include/llvm/ADT/ilist_base.h
@@ -254,9 +320,17 @@ CMakeFiles/Cinderella.dir/Cinderella.cc.o
  ../llvm/include/llvm/ADT/iterator.h
  ../llvm/include/llvm/ADT/iterator_range.h
  ../llvm/include/llvm/ADT/simple_ilist.h
+ ../llvm/include/llvm/Analysis/AliasAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryDependenceAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryLocation.h
+ ../llvm/include/llvm/Analysis/OrderedBasicBlock.h
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.def
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.h
  ../llvm/include/llvm/IR/Argument.h
  ../llvm/include/llvm/IR/Attributes.h
  ../llvm/include/llvm/IR/BasicBlock.h
+ ../llvm/include/llvm/IR/CFG.h
+ ../llvm/include/llvm/IR/CallSite.h
  ../llvm/include/llvm/IR/CallingConv.h
  ../llvm/include/llvm/IR/Comdat.h
  ../llvm/include/llvm/IR/Constant.h
@@ -266,6 +340,7 @@ CMakeFiles/Cinderella.dir/Cinderella.cc.o
  ../llvm/include/llvm/IR/DebugLoc.h
  ../llvm/include/llvm/IR/DerivedTypes.h
  ../llvm/include/llvm/IR/DiagnosticHandler.h
+ ../llvm/include/llvm/IR/Dominators.h
  ../llvm/include/llvm/IR/Function.h
  ../llvm/include/llvm/IR/GlobalAlias.h
  ../llvm/include/llvm/IR/GlobalIFunc.h
@@ -280,6 +355,7 @@ CMakeFiles/Cinderella.dir/Cinderella.cc.o
  ../llvm/include/llvm/IR/Instructions.h
  ../llvm/include/llvm/IR/Intrinsics.h
  ../llvm/include/llvm/IR/LLVMContext.h
+ ../llvm/include/llvm/IR/LegacyPassManager.h
  ../llvm/include/llvm/IR/Metadata.def
  ../llvm/include/llvm/IR/Metadata.h
  ../llvm/include/llvm/IR/Module.h
@@ -287,6 +363,7 @@ CMakeFiles/Cinderella.dir/Cinderella.cc.o
  ../llvm/include/llvm/IR/Operator.h
  ../llvm/include/llvm/IR/PassManager.h
  ../llvm/include/llvm/IR/PassManagerInternal.h
+ ../llvm/include/llvm/IR/PredIteratorCache.h
  ../llvm/include/llvm/IR/SymbolTableListTraits.h
  ../llvm/include/llvm/IR/TrackingMDRef.h
  ../llvm/include/llvm/IR/Type.h
@@ -314,6 +391,7 @@ CMakeFiles/Cinderella.dir/Cinderella.cc.o
  ../llvm/include/llvm/Support/Debug.h
  ../llvm/include/llvm/Support/Endian.h
  ../llvm/include/llvm/Support/ErrorHandling.h
+ ../llvm/include/llvm/Support/GenericDomTree.h
  ../llvm/include/llvm/Support/Host.h
  ../llvm/include/llvm/Support/MD5.h
  ../llvm/include/llvm/Support/ManagedStatic.h
@@ -327,6 +405,9 @@ CMakeFiles/Cinderella.dir/Cinderella.cc.o
  ../llvm/include/llvm/Support/TypeName.h
  ../llvm/include/llvm/Support/raw_ostream.h
  ../llvm/include/llvm/Support/type_traits.h
+ ../llvm/include/llvm/Transforms/Scalar.h
+ ../llvm/include/llvm/Transforms/Scalar/GVN.h
+ ../llvm/include/llvm/Transforms/Utils/OrderedInstructions.h
  /Users/jason/Desktop/Repo/Cinderella/BinaryExprAST.h
  /Users/jason/Desktop/Repo/Cinderella/CallExprAST.h
  /Users/jason/Desktop/Repo/Cinderella/Cinderella.cc
@@ -352,19 +433,28 @@ CMakeFiles/Cinderella.dir/ExprAST.cc.o
  ../llvm/include/llvm/ADT/DenseMap.h
  ../llvm/include/llvm/ADT/DenseMapInfo.h
  ../llvm/include/llvm/ADT/DenseSet.h
+ ../llvm/include/llvm/ADT/DepthFirstIterator.h
  ../llvm/include/llvm/ADT/EpochTracker.h
  ../llvm/include/llvm/ADT/FoldingSet.h
+ ../llvm/include/llvm/ADT/GraphTraits.h
  ../llvm/include/llvm/ADT/Hashing.h
+ ../llvm/include/llvm/ADT/MapVector.h
  ../llvm/include/llvm/ADT/None.h
  ../llvm/include/llvm/ADT/Optional.h
+ ../llvm/include/llvm/ADT/PointerEmbeddedInt.h
  ../llvm/include/llvm/ADT/PointerIntPair.h
+ ../llvm/include/llvm/ADT/PointerSumType.h
  ../llvm/include/llvm/ADT/PointerUnion.h
+ ../llvm/include/llvm/ADT/PostOrderIterator.h
  ../llvm/include/llvm/ADT/STLExtras.h
+ ../llvm/include/llvm/ADT/SetVector.h
  ../llvm/include/llvm/ADT/SmallPtrSet.h
  ../llvm/include/llvm/ADT/SmallString.h
  ../llvm/include/llvm/ADT/SmallVector.h
  ../llvm/include/llvm/ADT/StringMap.h
  ../llvm/include/llvm/ADT/StringRef.h
+ ../llvm/include/llvm/ADT/TinyPtrVector.h
+ ../llvm/include/llvm/ADT/Triple.h
  ../llvm/include/llvm/ADT/Twine.h
  ../llvm/include/llvm/ADT/ilist.h
  ../llvm/include/llvm/ADT/ilist_base.h
@@ -375,9 +465,17 @@ CMakeFiles/Cinderella.dir/ExprAST.cc.o
  ../llvm/include/llvm/ADT/iterator.h
  ../llvm/include/llvm/ADT/iterator_range.h
  ../llvm/include/llvm/ADT/simple_ilist.h
+ ../llvm/include/llvm/Analysis/AliasAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryDependenceAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryLocation.h
+ ../llvm/include/llvm/Analysis/OrderedBasicBlock.h
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.def
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.h
  ../llvm/include/llvm/IR/Argument.h
  ../llvm/include/llvm/IR/Attributes.h
  ../llvm/include/llvm/IR/BasicBlock.h
+ ../llvm/include/llvm/IR/CFG.h
+ ../llvm/include/llvm/IR/CallSite.h
  ../llvm/include/llvm/IR/CallingConv.h
  ../llvm/include/llvm/IR/Comdat.h
  ../llvm/include/llvm/IR/Constant.h
@@ -387,6 +485,7 @@ CMakeFiles/Cinderella.dir/ExprAST.cc.o
  ../llvm/include/llvm/IR/DebugLoc.h
  ../llvm/include/llvm/IR/DerivedTypes.h
  ../llvm/include/llvm/IR/DiagnosticHandler.h
+ ../llvm/include/llvm/IR/Dominators.h
  ../llvm/include/llvm/IR/Function.h
  ../llvm/include/llvm/IR/GlobalAlias.h
  ../llvm/include/llvm/IR/GlobalIFunc.h
@@ -401,11 +500,15 @@ CMakeFiles/Cinderella.dir/ExprAST.cc.o
  ../llvm/include/llvm/IR/Instructions.h
  ../llvm/include/llvm/IR/Intrinsics.h
  ../llvm/include/llvm/IR/LLVMContext.h
+ ../llvm/include/llvm/IR/LegacyPassManager.h
  ../llvm/include/llvm/IR/Metadata.def
  ../llvm/include/llvm/IR/Metadata.h
  ../llvm/include/llvm/IR/Module.h
  ../llvm/include/llvm/IR/OperandTraits.h
  ../llvm/include/llvm/IR/Operator.h
+ ../llvm/include/llvm/IR/PassManager.h
+ ../llvm/include/llvm/IR/PassManagerInternal.h
+ ../llvm/include/llvm/IR/PredIteratorCache.h
  ../llvm/include/llvm/IR/SymbolTableListTraits.h
  ../llvm/include/llvm/IR/TrackingMDRef.h
  ../llvm/include/llvm/IR/Type.h
@@ -429,8 +532,10 @@ CMakeFiles/Cinderella.dir/ExprAST.cc.o
  ../llvm/include/llvm/Support/CodeGen.h
  ../llvm/include/llvm/Support/CommandLine.h
  ../llvm/include/llvm/Support/Compiler.h
+ ../llvm/include/llvm/Support/Debug.h
  ../llvm/include/llvm/Support/Endian.h
  ../llvm/include/llvm/Support/ErrorHandling.h
+ ../llvm/include/llvm/Support/GenericDomTree.h
  ../llvm/include/llvm/Support/Host.h
  ../llvm/include/llvm/Support/MD5.h
  ../llvm/include/llvm/Support/ManagedStatic.h
@@ -441,7 +546,12 @@ CMakeFiles/Cinderella.dir/ExprAST.cc.o
  ../llvm/include/llvm/Support/ReverseIteration.h
  ../llvm/include/llvm/Support/SwapByteOrder.h
  ../llvm/include/llvm/Support/Threading.h
+ ../llvm/include/llvm/Support/TypeName.h
+ ../llvm/include/llvm/Support/raw_ostream.h
  ../llvm/include/llvm/Support/type_traits.h
+ ../llvm/include/llvm/Transforms/Scalar.h
+ ../llvm/include/llvm/Transforms/Scalar/GVN.h
+ ../llvm/include/llvm/Transforms/Utils/OrderedInstructions.h
  /Users/jason/Desktop/Repo/Cinderella/ExprAST.cc
  /Users/jason/Desktop/Repo/Cinderella/ExprAST.h
  /Users/jason/Desktop/Repo/Cinderella/LLVMBinder.h
@@ -459,20 +569,28 @@ CMakeFiles/Cinderella.dir/FunctionAST.cc.o
  ../llvm/include/llvm/ADT/DenseMap.h
  ../llvm/include/llvm/ADT/DenseMapInfo.h
  ../llvm/include/llvm/ADT/DenseSet.h
+ ../llvm/include/llvm/ADT/DepthFirstIterator.h
  ../llvm/include/llvm/ADT/EpochTracker.h
  ../llvm/include/llvm/ADT/FoldingSet.h
+ ../llvm/include/llvm/ADT/GraphTraits.h
  ../llvm/include/llvm/ADT/Hashing.h
+ ../llvm/include/llvm/ADT/MapVector.h
  ../llvm/include/llvm/ADT/None.h
  ../llvm/include/llvm/ADT/Optional.h
+ ../llvm/include/llvm/ADT/PointerEmbeddedInt.h
  ../llvm/include/llvm/ADT/PointerIntPair.h
+ ../llvm/include/llvm/ADT/PointerSumType.h
  ../llvm/include/llvm/ADT/PointerUnion.h
+ ../llvm/include/llvm/ADT/PostOrderIterator.h
  ../llvm/include/llvm/ADT/STLExtras.h
+ ../llvm/include/llvm/ADT/SetVector.h
  ../llvm/include/llvm/ADT/SmallPtrSet.h
  ../llvm/include/llvm/ADT/SmallString.h
  ../llvm/include/llvm/ADT/SmallVector.h
  ../llvm/include/llvm/ADT/StringMap.h
  ../llvm/include/llvm/ADT/StringRef.h
  ../llvm/include/llvm/ADT/TinyPtrVector.h
+ ../llvm/include/llvm/ADT/Triple.h
  ../llvm/include/llvm/ADT/Twine.h
  ../llvm/include/llvm/ADT/ilist.h
  ../llvm/include/llvm/ADT/ilist_base.h
@@ -483,9 +601,17 @@ CMakeFiles/Cinderella.dir/FunctionAST.cc.o
  ../llvm/include/llvm/ADT/iterator.h
  ../llvm/include/llvm/ADT/iterator_range.h
  ../llvm/include/llvm/ADT/simple_ilist.h
+ ../llvm/include/llvm/Analysis/AliasAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryDependenceAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryLocation.h
+ ../llvm/include/llvm/Analysis/OrderedBasicBlock.h
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.def
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.h
  ../llvm/include/llvm/IR/Argument.h
  ../llvm/include/llvm/IR/Attributes.h
  ../llvm/include/llvm/IR/BasicBlock.h
+ ../llvm/include/llvm/IR/CFG.h
+ ../llvm/include/llvm/IR/CallSite.h
  ../llvm/include/llvm/IR/CallingConv.h
  ../llvm/include/llvm/IR/Comdat.h
  ../llvm/include/llvm/IR/Constant.h
@@ -495,6 +621,7 @@ CMakeFiles/Cinderella.dir/FunctionAST.cc.o
  ../llvm/include/llvm/IR/DebugLoc.h
  ../llvm/include/llvm/IR/DerivedTypes.h
  ../llvm/include/llvm/IR/DiagnosticHandler.h
+ ../llvm/include/llvm/IR/Dominators.h
  ../llvm/include/llvm/IR/Function.h
  ../llvm/include/llvm/IR/GlobalAlias.h
  ../llvm/include/llvm/IR/GlobalIFunc.h
@@ -509,6 +636,7 @@ CMakeFiles/Cinderella.dir/FunctionAST.cc.o
  ../llvm/include/llvm/IR/Instructions.h
  ../llvm/include/llvm/IR/Intrinsics.h
  ../llvm/include/llvm/IR/LLVMContext.h
+ ../llvm/include/llvm/IR/LegacyPassManager.h
  ../llvm/include/llvm/IR/Metadata.def
  ../llvm/include/llvm/IR/Metadata.h
  ../llvm/include/llvm/IR/Module.h
@@ -516,6 +644,7 @@ CMakeFiles/Cinderella.dir/FunctionAST.cc.o
  ../llvm/include/llvm/IR/Operator.h
  ../llvm/include/llvm/IR/PassManager.h
  ../llvm/include/llvm/IR/PassManagerInternal.h
+ ../llvm/include/llvm/IR/PredIteratorCache.h
  ../llvm/include/llvm/IR/SymbolTableListTraits.h
  ../llvm/include/llvm/IR/TrackingMDRef.h
  ../llvm/include/llvm/IR/Type.h
@@ -543,6 +672,7 @@ CMakeFiles/Cinderella.dir/FunctionAST.cc.o
  ../llvm/include/llvm/Support/Debug.h
  ../llvm/include/llvm/Support/Endian.h
  ../llvm/include/llvm/Support/ErrorHandling.h
+ ../llvm/include/llvm/Support/GenericDomTree.h
  ../llvm/include/llvm/Support/Host.h
  ../llvm/include/llvm/Support/MD5.h
  ../llvm/include/llvm/Support/ManagedStatic.h
@@ -556,6 +686,9 @@ CMakeFiles/Cinderella.dir/FunctionAST.cc.o
  ../llvm/include/llvm/Support/TypeName.h
  ../llvm/include/llvm/Support/raw_ostream.h
  ../llvm/include/llvm/Support/type_traits.h
+ ../llvm/include/llvm/Transforms/Scalar.h
+ ../llvm/include/llvm/Transforms/Scalar/GVN.h
+ ../llvm/include/llvm/Transforms/Utils/OrderedInstructions.h
  /Users/jason/Desktop/Repo/Cinderella/ExprAST.h
  /Users/jason/Desktop/Repo/Cinderella/FunctionAST.cc
  /Users/jason/Desktop/Repo/Cinderella/FunctionAST.h
@@ -574,19 +707,28 @@ CMakeFiles/Cinderella.dir/LLVMBinder.cc.o
  ../llvm/include/llvm/ADT/DenseMap.h
  ../llvm/include/llvm/ADT/DenseMapInfo.h
  ../llvm/include/llvm/ADT/DenseSet.h
+ ../llvm/include/llvm/ADT/DepthFirstIterator.h
  ../llvm/include/llvm/ADT/EpochTracker.h
  ../llvm/include/llvm/ADT/FoldingSet.h
+ ../llvm/include/llvm/ADT/GraphTraits.h
  ../llvm/include/llvm/ADT/Hashing.h
+ ../llvm/include/llvm/ADT/MapVector.h
  ../llvm/include/llvm/ADT/None.h
  ../llvm/include/llvm/ADT/Optional.h
+ ../llvm/include/llvm/ADT/PointerEmbeddedInt.h
  ../llvm/include/llvm/ADT/PointerIntPair.h
+ ../llvm/include/llvm/ADT/PointerSumType.h
  ../llvm/include/llvm/ADT/PointerUnion.h
+ ../llvm/include/llvm/ADT/PostOrderIterator.h
  ../llvm/include/llvm/ADT/STLExtras.h
+ ../llvm/include/llvm/ADT/SetVector.h
  ../llvm/include/llvm/ADT/SmallPtrSet.h
  ../llvm/include/llvm/ADT/SmallString.h
  ../llvm/include/llvm/ADT/SmallVector.h
  ../llvm/include/llvm/ADT/StringMap.h
  ../llvm/include/llvm/ADT/StringRef.h
+ ../llvm/include/llvm/ADT/TinyPtrVector.h
+ ../llvm/include/llvm/ADT/Triple.h
  ../llvm/include/llvm/ADT/Twine.h
  ../llvm/include/llvm/ADT/ilist.h
  ../llvm/include/llvm/ADT/ilist_base.h
@@ -597,9 +739,17 @@ CMakeFiles/Cinderella.dir/LLVMBinder.cc.o
  ../llvm/include/llvm/ADT/iterator.h
  ../llvm/include/llvm/ADT/iterator_range.h
  ../llvm/include/llvm/ADT/simple_ilist.h
+ ../llvm/include/llvm/Analysis/AliasAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryDependenceAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryLocation.h
+ ../llvm/include/llvm/Analysis/OrderedBasicBlock.h
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.def
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.h
  ../llvm/include/llvm/IR/Argument.h
  ../llvm/include/llvm/IR/Attributes.h
  ../llvm/include/llvm/IR/BasicBlock.h
+ ../llvm/include/llvm/IR/CFG.h
+ ../llvm/include/llvm/IR/CallSite.h
  ../llvm/include/llvm/IR/CallingConv.h
  ../llvm/include/llvm/IR/Comdat.h
  ../llvm/include/llvm/IR/Constant.h
@@ -609,6 +759,7 @@ CMakeFiles/Cinderella.dir/LLVMBinder.cc.o
  ../llvm/include/llvm/IR/DebugLoc.h
  ../llvm/include/llvm/IR/DerivedTypes.h
  ../llvm/include/llvm/IR/DiagnosticHandler.h
+ ../llvm/include/llvm/IR/Dominators.h
  ../llvm/include/llvm/IR/Function.h
  ../llvm/include/llvm/IR/GlobalAlias.h
  ../llvm/include/llvm/IR/GlobalIFunc.h
@@ -623,11 +774,15 @@ CMakeFiles/Cinderella.dir/LLVMBinder.cc.o
  ../llvm/include/llvm/IR/Instructions.h
  ../llvm/include/llvm/IR/Intrinsics.h
  ../llvm/include/llvm/IR/LLVMContext.h
+ ../llvm/include/llvm/IR/LegacyPassManager.h
  ../llvm/include/llvm/IR/Metadata.def
  ../llvm/include/llvm/IR/Metadata.h
  ../llvm/include/llvm/IR/Module.h
  ../llvm/include/llvm/IR/OperandTraits.h
  ../llvm/include/llvm/IR/Operator.h
+ ../llvm/include/llvm/IR/PassManager.h
+ ../llvm/include/llvm/IR/PassManagerInternal.h
+ ../llvm/include/llvm/IR/PredIteratorCache.h
  ../llvm/include/llvm/IR/SymbolTableListTraits.h
  ../llvm/include/llvm/IR/TrackingMDRef.h
  ../llvm/include/llvm/IR/Type.h
@@ -651,8 +806,10 @@ CMakeFiles/Cinderella.dir/LLVMBinder.cc.o
  ../llvm/include/llvm/Support/CodeGen.h
  ../llvm/include/llvm/Support/CommandLine.h
  ../llvm/include/llvm/Support/Compiler.h
+ ../llvm/include/llvm/Support/Debug.h
  ../llvm/include/llvm/Support/Endian.h
  ../llvm/include/llvm/Support/ErrorHandling.h
+ ../llvm/include/llvm/Support/GenericDomTree.h
  ../llvm/include/llvm/Support/Host.h
  ../llvm/include/llvm/Support/MD5.h
  ../llvm/include/llvm/Support/ManagedStatic.h
@@ -663,7 +820,12 @@ CMakeFiles/Cinderella.dir/LLVMBinder.cc.o
  ../llvm/include/llvm/Support/ReverseIteration.h
  ../llvm/include/llvm/Support/SwapByteOrder.h
  ../llvm/include/llvm/Support/Threading.h
+ ../llvm/include/llvm/Support/TypeName.h
+ ../llvm/include/llvm/Support/raw_ostream.h
  ../llvm/include/llvm/Support/type_traits.h
+ ../llvm/include/llvm/Transforms/Scalar.h
+ ../llvm/include/llvm/Transforms/Scalar/GVN.h
+ ../llvm/include/llvm/Transforms/Utils/OrderedInstructions.h
  /Users/jason/Desktop/Repo/Cinderella/LLVMBinder.cc
  /Users/jason/Desktop/Repo/Cinderella/LLVMBinder.h
 CMakeFiles/Cinderella.dir/Lexer.cc.o
@@ -696,19 +858,28 @@ CMakeFiles/Cinderella.dir/NumberExprAST.cc.o
  ../llvm/include/llvm/ADT/DenseMap.h
  ../llvm/include/llvm/ADT/DenseMapInfo.h
  ../llvm/include/llvm/ADT/DenseSet.h
+ ../llvm/include/llvm/ADT/DepthFirstIterator.h
  ../llvm/include/llvm/ADT/EpochTracker.h
  ../llvm/include/llvm/ADT/FoldingSet.h
+ ../llvm/include/llvm/ADT/GraphTraits.h
  ../llvm/include/llvm/ADT/Hashing.h
+ ../llvm/include/llvm/ADT/MapVector.h
  ../llvm/include/llvm/ADT/None.h
  ../llvm/include/llvm/ADT/Optional.h
+ ../llvm/include/llvm/ADT/PointerEmbeddedInt.h
  ../llvm/include/llvm/ADT/PointerIntPair.h
+ ../llvm/include/llvm/ADT/PointerSumType.h
  ../llvm/include/llvm/ADT/PointerUnion.h
+ ../llvm/include/llvm/ADT/PostOrderIterator.h
  ../llvm/include/llvm/ADT/STLExtras.h
+ ../llvm/include/llvm/ADT/SetVector.h
  ../llvm/include/llvm/ADT/SmallPtrSet.h
  ../llvm/include/llvm/ADT/SmallString.h
  ../llvm/include/llvm/ADT/SmallVector.h
  ../llvm/include/llvm/ADT/StringMap.h
  ../llvm/include/llvm/ADT/StringRef.h
+ ../llvm/include/llvm/ADT/TinyPtrVector.h
+ ../llvm/include/llvm/ADT/Triple.h
  ../llvm/include/llvm/ADT/Twine.h
  ../llvm/include/llvm/ADT/ilist.h
  ../llvm/include/llvm/ADT/ilist_base.h
@@ -719,9 +890,17 @@ CMakeFiles/Cinderella.dir/NumberExprAST.cc.o
  ../llvm/include/llvm/ADT/iterator.h
  ../llvm/include/llvm/ADT/iterator_range.h
  ../llvm/include/llvm/ADT/simple_ilist.h
+ ../llvm/include/llvm/Analysis/AliasAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryDependenceAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryLocation.h
+ ../llvm/include/llvm/Analysis/OrderedBasicBlock.h
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.def
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.h
  ../llvm/include/llvm/IR/Argument.h
  ../llvm/include/llvm/IR/Attributes.h
  ../llvm/include/llvm/IR/BasicBlock.h
+ ../llvm/include/llvm/IR/CFG.h
+ ../llvm/include/llvm/IR/CallSite.h
  ../llvm/include/llvm/IR/CallingConv.h
  ../llvm/include/llvm/IR/Comdat.h
  ../llvm/include/llvm/IR/Constant.h
@@ -731,6 +910,7 @@ CMakeFiles/Cinderella.dir/NumberExprAST.cc.o
  ../llvm/include/llvm/IR/DebugLoc.h
  ../llvm/include/llvm/IR/DerivedTypes.h
  ../llvm/include/llvm/IR/DiagnosticHandler.h
+ ../llvm/include/llvm/IR/Dominators.h
  ../llvm/include/llvm/IR/Function.h
  ../llvm/include/llvm/IR/GlobalAlias.h
  ../llvm/include/llvm/IR/GlobalIFunc.h
@@ -745,11 +925,15 @@ CMakeFiles/Cinderella.dir/NumberExprAST.cc.o
  ../llvm/include/llvm/IR/Instructions.h
  ../llvm/include/llvm/IR/Intrinsics.h
  ../llvm/include/llvm/IR/LLVMContext.h
+ ../llvm/include/llvm/IR/LegacyPassManager.h
  ../llvm/include/llvm/IR/Metadata.def
  ../llvm/include/llvm/IR/Metadata.h
  ../llvm/include/llvm/IR/Module.h
  ../llvm/include/llvm/IR/OperandTraits.h
  ../llvm/include/llvm/IR/Operator.h
+ ../llvm/include/llvm/IR/PassManager.h
+ ../llvm/include/llvm/IR/PassManagerInternal.h
+ ../llvm/include/llvm/IR/PredIteratorCache.h
  ../llvm/include/llvm/IR/SymbolTableListTraits.h
  ../llvm/include/llvm/IR/TrackingMDRef.h
  ../llvm/include/llvm/IR/Type.h
@@ -773,8 +957,10 @@ CMakeFiles/Cinderella.dir/NumberExprAST.cc.o
  ../llvm/include/llvm/Support/CodeGen.h
  ../llvm/include/llvm/Support/CommandLine.h
  ../llvm/include/llvm/Support/Compiler.h
+ ../llvm/include/llvm/Support/Debug.h
  ../llvm/include/llvm/Support/Endian.h
  ../llvm/include/llvm/Support/ErrorHandling.h
+ ../llvm/include/llvm/Support/GenericDomTree.h
  ../llvm/include/llvm/Support/Host.h
  ../llvm/include/llvm/Support/MD5.h
  ../llvm/include/llvm/Support/ManagedStatic.h
@@ -785,7 +971,12 @@ CMakeFiles/Cinderella.dir/NumberExprAST.cc.o
  ../llvm/include/llvm/Support/ReverseIteration.h
  ../llvm/include/llvm/Support/SwapByteOrder.h
  ../llvm/include/llvm/Support/Threading.h
+ ../llvm/include/llvm/Support/TypeName.h
+ ../llvm/include/llvm/Support/raw_ostream.h
  ../llvm/include/llvm/Support/type_traits.h
+ ../llvm/include/llvm/Transforms/Scalar.h
+ ../llvm/include/llvm/Transforms/Scalar/GVN.h
+ ../llvm/include/llvm/Transforms/Utils/OrderedInstructions.h
  /Users/jason/Desktop/Repo/Cinderella/ExprAST.h
  /Users/jason/Desktop/Repo/Cinderella/LLVMBinder.h
  /Users/jason/Desktop/Repo/Cinderella/NumberExprAST.cc
@@ -804,20 +995,28 @@ CMakeFiles/Cinderella.dir/Parser.cc.o
  ../llvm/include/llvm/ADT/DenseMap.h
  ../llvm/include/llvm/ADT/DenseMapInfo.h
  ../llvm/include/llvm/ADT/DenseSet.h
+ ../llvm/include/llvm/ADT/DepthFirstIterator.h
  ../llvm/include/llvm/ADT/EpochTracker.h
  ../llvm/include/llvm/ADT/FoldingSet.h
+ ../llvm/include/llvm/ADT/GraphTraits.h
  ../llvm/include/llvm/ADT/Hashing.h
+ ../llvm/include/llvm/ADT/MapVector.h
  ../llvm/include/llvm/ADT/None.h
  ../llvm/include/llvm/ADT/Optional.h
+ ../llvm/include/llvm/ADT/PointerEmbeddedInt.h
  ../llvm/include/llvm/ADT/PointerIntPair.h
+ ../llvm/include/llvm/ADT/PointerSumType.h
  ../llvm/include/llvm/ADT/PointerUnion.h
+ ../llvm/include/llvm/ADT/PostOrderIterator.h
  ../llvm/include/llvm/ADT/STLExtras.h
+ ../llvm/include/llvm/ADT/SetVector.h
  ../llvm/include/llvm/ADT/SmallPtrSet.h
  ../llvm/include/llvm/ADT/SmallString.h
  ../llvm/include/llvm/ADT/SmallVector.h
  ../llvm/include/llvm/ADT/StringMap.h
  ../llvm/include/llvm/ADT/StringRef.h
  ../llvm/include/llvm/ADT/TinyPtrVector.h
+ ../llvm/include/llvm/ADT/Triple.h
  ../llvm/include/llvm/ADT/Twine.h
  ../llvm/include/llvm/ADT/ilist.h
  ../llvm/include/llvm/ADT/ilist_base.h
@@ -828,9 +1027,17 @@ CMakeFiles/Cinderella.dir/Parser.cc.o
  ../llvm/include/llvm/ADT/iterator.h
  ../llvm/include/llvm/ADT/iterator_range.h
  ../llvm/include/llvm/ADT/simple_ilist.h
+ ../llvm/include/llvm/Analysis/AliasAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryDependenceAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryLocation.h
+ ../llvm/include/llvm/Analysis/OrderedBasicBlock.h
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.def
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.h
  ../llvm/include/llvm/IR/Argument.h
  ../llvm/include/llvm/IR/Attributes.h
  ../llvm/include/llvm/IR/BasicBlock.h
+ ../llvm/include/llvm/IR/CFG.h
+ ../llvm/include/llvm/IR/CallSite.h
  ../llvm/include/llvm/IR/CallingConv.h
  ../llvm/include/llvm/IR/Comdat.h
  ../llvm/include/llvm/IR/Constant.h
@@ -840,6 +1047,7 @@ CMakeFiles/Cinderella.dir/Parser.cc.o
  ../llvm/include/llvm/IR/DebugLoc.h
  ../llvm/include/llvm/IR/DerivedTypes.h
  ../llvm/include/llvm/IR/DiagnosticHandler.h
+ ../llvm/include/llvm/IR/Dominators.h
  ../llvm/include/llvm/IR/Function.h
  ../llvm/include/llvm/IR/GlobalAlias.h
  ../llvm/include/llvm/IR/GlobalIFunc.h
@@ -854,6 +1062,7 @@ CMakeFiles/Cinderella.dir/Parser.cc.o
  ../llvm/include/llvm/IR/Instructions.h
  ../llvm/include/llvm/IR/Intrinsics.h
  ../llvm/include/llvm/IR/LLVMContext.h
+ ../llvm/include/llvm/IR/LegacyPassManager.h
  ../llvm/include/llvm/IR/Metadata.def
  ../llvm/include/llvm/IR/Metadata.h
  ../llvm/include/llvm/IR/Module.h
@@ -861,6 +1070,7 @@ CMakeFiles/Cinderella.dir/Parser.cc.o
  ../llvm/include/llvm/IR/Operator.h
  ../llvm/include/llvm/IR/PassManager.h
  ../llvm/include/llvm/IR/PassManagerInternal.h
+ ../llvm/include/llvm/IR/PredIteratorCache.h
  ../llvm/include/llvm/IR/SymbolTableListTraits.h
  ../llvm/include/llvm/IR/TrackingMDRef.h
  ../llvm/include/llvm/IR/Type.h
@@ -888,6 +1098,7 @@ CMakeFiles/Cinderella.dir/Parser.cc.o
  ../llvm/include/llvm/Support/Debug.h
  ../llvm/include/llvm/Support/Endian.h
  ../llvm/include/llvm/Support/ErrorHandling.h
+ ../llvm/include/llvm/Support/GenericDomTree.h
  ../llvm/include/llvm/Support/Host.h
  ../llvm/include/llvm/Support/MD5.h
  ../llvm/include/llvm/Support/ManagedStatic.h
@@ -901,6 +1112,9 @@ CMakeFiles/Cinderella.dir/Parser.cc.o
  ../llvm/include/llvm/Support/TypeName.h
  ../llvm/include/llvm/Support/raw_ostream.h
  ../llvm/include/llvm/Support/type_traits.h
+ ../llvm/include/llvm/Transforms/Scalar.h
+ ../llvm/include/llvm/Transforms/Scalar/GVN.h
+ ../llvm/include/llvm/Transforms/Utils/OrderedInstructions.h
  /Users/jason/Desktop/Repo/Cinderella/BinaryExprAST.h
  /Users/jason/Desktop/Repo/Cinderella/CallExprAST.h
  /Users/jason/Desktop/Repo/Cinderella/ExprAST.h
@@ -925,19 +1139,28 @@ CMakeFiles/Cinderella.dir/PrototypeAST.cc.o
  ../llvm/include/llvm/ADT/DenseMap.h
  ../llvm/include/llvm/ADT/DenseMapInfo.h
  ../llvm/include/llvm/ADT/DenseSet.h
+ ../llvm/include/llvm/ADT/DepthFirstIterator.h
  ../llvm/include/llvm/ADT/EpochTracker.h
  ../llvm/include/llvm/ADT/FoldingSet.h
+ ../llvm/include/llvm/ADT/GraphTraits.h
  ../llvm/include/llvm/ADT/Hashing.h
+ ../llvm/include/llvm/ADT/MapVector.h
  ../llvm/include/llvm/ADT/None.h
  ../llvm/include/llvm/ADT/Optional.h
+ ../llvm/include/llvm/ADT/PointerEmbeddedInt.h
  ../llvm/include/llvm/ADT/PointerIntPair.h
+ ../llvm/include/llvm/ADT/PointerSumType.h
  ../llvm/include/llvm/ADT/PointerUnion.h
+ ../llvm/include/llvm/ADT/PostOrderIterator.h
  ../llvm/include/llvm/ADT/STLExtras.h
+ ../llvm/include/llvm/ADT/SetVector.h
  ../llvm/include/llvm/ADT/SmallPtrSet.h
  ../llvm/include/llvm/ADT/SmallString.h
  ../llvm/include/llvm/ADT/SmallVector.h
  ../llvm/include/llvm/ADT/StringMap.h
  ../llvm/include/llvm/ADT/StringRef.h
+ ../llvm/include/llvm/ADT/TinyPtrVector.h
+ ../llvm/include/llvm/ADT/Triple.h
  ../llvm/include/llvm/ADT/Twine.h
  ../llvm/include/llvm/ADT/ilist.h
  ../llvm/include/llvm/ADT/ilist_base.h
@@ -948,9 +1171,17 @@ CMakeFiles/Cinderella.dir/PrototypeAST.cc.o
  ../llvm/include/llvm/ADT/iterator.h
  ../llvm/include/llvm/ADT/iterator_range.h
  ../llvm/include/llvm/ADT/simple_ilist.h
+ ../llvm/include/llvm/Analysis/AliasAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryDependenceAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryLocation.h
+ ../llvm/include/llvm/Analysis/OrderedBasicBlock.h
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.def
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.h
  ../llvm/include/llvm/IR/Argument.h
  ../llvm/include/llvm/IR/Attributes.h
  ../llvm/include/llvm/IR/BasicBlock.h
+ ../llvm/include/llvm/IR/CFG.h
+ ../llvm/include/llvm/IR/CallSite.h
  ../llvm/include/llvm/IR/CallingConv.h
  ../llvm/include/llvm/IR/Comdat.h
  ../llvm/include/llvm/IR/Constant.h
@@ -960,6 +1191,7 @@ CMakeFiles/Cinderella.dir/PrototypeAST.cc.o
  ../llvm/include/llvm/IR/DebugLoc.h
  ../llvm/include/llvm/IR/DerivedTypes.h
  ../llvm/include/llvm/IR/DiagnosticHandler.h
+ ../llvm/include/llvm/IR/Dominators.h
  ../llvm/include/llvm/IR/Function.h
  ../llvm/include/llvm/IR/GlobalAlias.h
  ../llvm/include/llvm/IR/GlobalIFunc.h
@@ -974,11 +1206,15 @@ CMakeFiles/Cinderella.dir/PrototypeAST.cc.o
  ../llvm/include/llvm/IR/Instructions.h
  ../llvm/include/llvm/IR/Intrinsics.h
  ../llvm/include/llvm/IR/LLVMContext.h
+ ../llvm/include/llvm/IR/LegacyPassManager.h
  ../llvm/include/llvm/IR/Metadata.def
  ../llvm/include/llvm/IR/Metadata.h
  ../llvm/include/llvm/IR/Module.h
  ../llvm/include/llvm/IR/OperandTraits.h
  ../llvm/include/llvm/IR/Operator.h
+ ../llvm/include/llvm/IR/PassManager.h
+ ../llvm/include/llvm/IR/PassManagerInternal.h
+ ../llvm/include/llvm/IR/PredIteratorCache.h
  ../llvm/include/llvm/IR/SymbolTableListTraits.h
  ../llvm/include/llvm/IR/TrackingMDRef.h
  ../llvm/include/llvm/IR/Type.h
@@ -1002,8 +1238,10 @@ CMakeFiles/Cinderella.dir/PrototypeAST.cc.o
  ../llvm/include/llvm/Support/CodeGen.h
  ../llvm/include/llvm/Support/CommandLine.h
  ../llvm/include/llvm/Support/Compiler.h
+ ../llvm/include/llvm/Support/Debug.h
  ../llvm/include/llvm/Support/Endian.h
  ../llvm/include/llvm/Support/ErrorHandling.h
+ ../llvm/include/llvm/Support/GenericDomTree.h
  ../llvm/include/llvm/Support/Host.h
  ../llvm/include/llvm/Support/MD5.h
  ../llvm/include/llvm/Support/ManagedStatic.h
@@ -1014,7 +1252,12 @@ CMakeFiles/Cinderella.dir/PrototypeAST.cc.o
  ../llvm/include/llvm/Support/ReverseIteration.h
  ../llvm/include/llvm/Support/SwapByteOrder.h
  ../llvm/include/llvm/Support/Threading.h
+ ../llvm/include/llvm/Support/TypeName.h
+ ../llvm/include/llvm/Support/raw_ostream.h
  ../llvm/include/llvm/Support/type_traits.h
+ ../llvm/include/llvm/Transforms/Scalar.h
+ ../llvm/include/llvm/Transforms/Scalar/GVN.h
+ ../llvm/include/llvm/Transforms/Utils/OrderedInstructions.h
  /Users/jason/Desktop/Repo/Cinderella/LLVMBinder.h
  /Users/jason/Desktop/Repo/Cinderella/PrototypeAST.cc
  /Users/jason/Desktop/Repo/Cinderella/PrototypeAST.h
@@ -1031,19 +1274,28 @@ CMakeFiles/Cinderella.dir/VariableExprAST.cc.o
  ../llvm/include/llvm/ADT/DenseMap.h
  ../llvm/include/llvm/ADT/DenseMapInfo.h
  ../llvm/include/llvm/ADT/DenseSet.h
+ ../llvm/include/llvm/ADT/DepthFirstIterator.h
  ../llvm/include/llvm/ADT/EpochTracker.h
  ../llvm/include/llvm/ADT/FoldingSet.h
+ ../llvm/include/llvm/ADT/GraphTraits.h
  ../llvm/include/llvm/ADT/Hashing.h
+ ../llvm/include/llvm/ADT/MapVector.h
  ../llvm/include/llvm/ADT/None.h
  ../llvm/include/llvm/ADT/Optional.h
+ ../llvm/include/llvm/ADT/PointerEmbeddedInt.h
  ../llvm/include/llvm/ADT/PointerIntPair.h
+ ../llvm/include/llvm/ADT/PointerSumType.h
  ../llvm/include/llvm/ADT/PointerUnion.h
+ ../llvm/include/llvm/ADT/PostOrderIterator.h
  ../llvm/include/llvm/ADT/STLExtras.h
+ ../llvm/include/llvm/ADT/SetVector.h
  ../llvm/include/llvm/ADT/SmallPtrSet.h
  ../llvm/include/llvm/ADT/SmallString.h
  ../llvm/include/llvm/ADT/SmallVector.h
  ../llvm/include/llvm/ADT/StringMap.h
  ../llvm/include/llvm/ADT/StringRef.h
+ ../llvm/include/llvm/ADT/TinyPtrVector.h
+ ../llvm/include/llvm/ADT/Triple.h
  ../llvm/include/llvm/ADT/Twine.h
  ../llvm/include/llvm/ADT/ilist.h
  ../llvm/include/llvm/ADT/ilist_base.h
@@ -1054,9 +1306,17 @@ CMakeFiles/Cinderella.dir/VariableExprAST.cc.o
  ../llvm/include/llvm/ADT/iterator.h
  ../llvm/include/llvm/ADT/iterator_range.h
  ../llvm/include/llvm/ADT/simple_ilist.h
+ ../llvm/include/llvm/Analysis/AliasAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryDependenceAnalysis.h
+ ../llvm/include/llvm/Analysis/MemoryLocation.h
+ ../llvm/include/llvm/Analysis/OrderedBasicBlock.h
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.def
+ ../llvm/include/llvm/Analysis/TargetLibraryInfo.h
  ../llvm/include/llvm/IR/Argument.h
  ../llvm/include/llvm/IR/Attributes.h
  ../llvm/include/llvm/IR/BasicBlock.h
+ ../llvm/include/llvm/IR/CFG.h
+ ../llvm/include/llvm/IR/CallSite.h
  ../llvm/include/llvm/IR/CallingConv.h
  ../llvm/include/llvm/IR/Comdat.h
  ../llvm/include/llvm/IR/Constant.h
@@ -1066,6 +1326,7 @@ CMakeFiles/Cinderella.dir/VariableExprAST.cc.o
  ../llvm/include/llvm/IR/DebugLoc.h
  ../llvm/include/llvm/IR/DerivedTypes.h
  ../llvm/include/llvm/IR/DiagnosticHandler.h
+ ../llvm/include/llvm/IR/Dominators.h
  ../llvm/include/llvm/IR/Function.h
  ../llvm/include/llvm/IR/GlobalAlias.h
  ../llvm/include/llvm/IR/GlobalIFunc.h
@@ -1080,11 +1341,15 @@ CMakeFiles/Cinderella.dir/VariableExprAST.cc.o
  ../llvm/include/llvm/IR/Instructions.h
  ../llvm/include/llvm/IR/Intrinsics.h
  ../llvm/include/llvm/IR/LLVMContext.h
+ ../llvm/include/llvm/IR/LegacyPassManager.h
  ../llvm/include/llvm/IR/Metadata.def
  ../llvm/include/llvm/IR/Metadata.h
  ../llvm/include/llvm/IR/Module.h
  ../llvm/include/llvm/IR/OperandTraits.h
  ../llvm/include/llvm/IR/Operator.h
+ ../llvm/include/llvm/IR/PassManager.h
+ ../llvm/include/llvm/IR/PassManagerInternal.h
+ ../llvm/include/llvm/IR/PredIteratorCache.h
  ../llvm/include/llvm/IR/SymbolTableListTraits.h
  ../llvm/include/llvm/IR/TrackingMDRef.h
  ../llvm/include/llvm/IR/Type.h
@@ -1108,8 +1373,10 @@ CMakeFiles/Cinderella.dir/VariableExprAST.cc.o
  ../llvm/include/llvm/Support/CodeGen.h
  ../llvm/include/llvm/Support/CommandLine.h
  ../llvm/include/llvm/Support/Compiler.h
+ ../llvm/include/llvm/Support/Debug.h
  ../llvm/include/llvm/Support/Endian.h
  ../llvm/include/llvm/Support/ErrorHandling.h
+ ../llvm/include/llvm/Support/GenericDomTree.h
  ../llvm/include/llvm/Support/Host.h
  ../llvm/include/llvm/Support/MD5.h
  ../llvm/include/llvm/Support/ManagedStatic.h
@@ -1120,7 +1387,12 @@ CMakeFiles/Cinderella.dir/VariableExprAST.cc.o
  ../llvm/include/llvm/Support/ReverseIteration.h
  ../llvm/include/llvm/Support/SwapByteOrder.h
  ../llvm/include/llvm/Support/Threading.h
+ ../llvm/include/llvm/Support/TypeName.h
+ ../llvm/include/llvm/Support/raw_ostream.h
  ../llvm/include/llvm/Support/type_traits.h
+ ../llvm/include/llvm/Transforms/Scalar.h
+ ../llvm/include/llvm/Transforms/Scalar/GVN.h
+ ../llvm/include/llvm/Transforms/Utils/OrderedInstructions.h
  /Users/jason/Desktop/Repo/Cinderella/ExprAST.h
  /Users/jason/Desktop/Repo/Cinderella/LLVMBinder.h
  /Users/jason/Desktop/Repo/Cinderella/PrototypeAST.h

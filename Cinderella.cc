@@ -11,6 +11,8 @@ llvm::IRBuilder<> LLVMBinder::Builder(LLVMBinder::TheContext);
 
 std::unique_ptr<llvm::Module> LLVMBinder::TheModule;
 
+std::unique_ptr<llvm::legacy::FunctionPassManager> LLVMBinder::TheFPM;
+
 int main(int argc, char* args[]) {
     // Set precedence list;
     Lexer::BinopPrecedence['<'] = 10;
@@ -23,9 +25,13 @@ int main(int argc, char* args[]) {
     fprintf(stderr, "ready> ");
     Lexer::GetNextToken();
 
+    LLVMBinder::TheModule = llvm::make_unique<llvm::Module>("Cinderella", LLVMBinder::TheContext);
+
+    // Create a new pass manager attached to it.
+    LLVMBinder::TheFPM = llvm::make_unique<llvm::legacy::FunctionPassManager>(LLVMBinder::TheModule.get());
 
     // Make the module, which holds all the code.
-    LLVMBinder::TheModule = llvm::make_unique<llvm::Module>("Cinderella", LLVMBinder::TheContext);
+    LLVMBinder::wrapLLVMOptimizers();
 
     // Dealing with inputs;
     Cinderella::MainCLILoop();

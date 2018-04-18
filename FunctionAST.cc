@@ -34,6 +34,9 @@ llvm::Function *FunctionAST::codegen() {
         // Validate the generated code, checking for consistency.
         llvm::verifyFunction(*TheFunction);
 
+        // Optimize the funcstion.
+        LLVMBinder::TheFPM->run(*TheFunction);
+
         return TheFunction;
     }
     // Error reading body, remove function.
