@@ -23,16 +23,16 @@ cd build && cmake .. && make
 
 #### 2、Build source code with CMake:
 ```commandline
-cd build && cmake .. && make
+cd build && cmake .. && make && make install
 ```
 
 #### 3、Run Compiler in Command Line:
 ```commandline 
 # Command line mode;
-./Cinderella
+Cinderella
 
 # Compiling mode (try build/sources);
-./Cinderella -o <output.o> <source.hs>
+Cinderella -o <output.o> <source.hs>
 ```
 
 #### 4、Sample Code:
