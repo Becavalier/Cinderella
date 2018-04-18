@@ -1,5 +1,5 @@
 # Cinderella
-Cinderella language and its compiler, built under LLVM.
+Cinderella language and its compiler, built with LLVM.
 
 
 ## How to use on MacOS?
@@ -32,5 +32,17 @@ cd build && cmake .. && make
 ./Cinderella
 
 # Compiling mode (try build/sources);
-./Cinderella -o <dist.o> <source.hs>
+./Cinderella -o <output.o> <source.hs>
 ```
+
+#### 4、Sample Code:
+```hangScript
+def add(x y) x + y;
+def minus(x y) x - y;
+```
+
+#### 5、Capability and TODO:
+- [x] Define simple function with binary expression;
+- [ ] Add standard control flow support;
+- [ ] Add customized local variable support;
+- [ ] Optimize compiler structure;

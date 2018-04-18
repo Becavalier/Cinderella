@@ -42,3 +42,6 @@ llvm_map_components_to_libnames(llvm_libs ${LLVM_TARGETS_TO_BUILD})
 
 # Link against LLVM libraries
 target_link_libraries(Cinderella ${llvm_libs})
+
+install(TARGETS Cinderella
+        RUNTIME DESTINATION bin)
