@@ -46,3 +46,4 @@ def minus(x y) x - y;
 - [ ] Add standard control flow support;
 - [ ] Add customized local variable support;
 - [ ] Optimize compiler structure;
+- [ ] Embed on WebAssembly (LLVM-IR to Wat to Wasm);
