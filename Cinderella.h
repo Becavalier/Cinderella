@@ -4,12 +4,15 @@
 #include "Parser.h"
 #include "LLVMBinder.h"
 #include "IOInterface.h"
+#include "Checker.h"
 #include <cstdio>
 #include <map>
 #include "llvm/IR/Value.h"
 #include "llvm/IR/IRBuilder.h"
 #include "llvm/IR/LLVMContext.h"
 #include "llvm/IR/Module.h"
+
+#define AUTHOR CINDERELLA_AUTHOR
 
 
 class Cinderella {

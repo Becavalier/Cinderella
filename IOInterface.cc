@@ -9,7 +9,7 @@ std::string IOInterface::CompileSourceName = "";
 char IOInterface::ReadCharacterSource (void) {
     if (CompileSourceName != "") {
         char _t = buffer[++bufferPointer];
-        std::cout << _t << std::endl;
+        // std::cout << _t << std::endl;
         return _t;
     } else {
         // CLI mode;
@@ -31,7 +31,7 @@ void IOInterface::InitialBufferPayload (const std::string &fileName) {
             in.get(c);
             // Play with the data
             buffer[counter] = c;
-            std::cout << c << std::endl;
+            // std::cout << c << std::endl;
             counter++;
         }
         buffer[counter] = EOF;

@@ -37,11 +37,15 @@ int main(int argc, char* args[]) {
         if (executeMode == "-o") {
             std::string oFile(args[2]);
             std::string iFile(args[3]);
-            // Dealing with the first section (seperated by ";");
-            Cinderella::MainStatic(iFile);
 
-            bool saved = LLVMBinder::generateTargetObjectFile(oFile);
-            cout << (saved ? "Object file saved succeed!" : "Object file saved failed!") << endl;
+            // Check given source file first;
+            if (Checker::CheckGivenSourceFileType(iFile)) {
+                // Dealing with the first section (seperated by ";");
+                Cinderella::MainStatic(iFile);
+
+                bool saved = LLVMBinder::generateTargetObjectFile(oFile);
+                cout << (saved ? "Object file [" + oFile + "] saved succeed!" : "Object file [" + oFile + "] saved failed!") << endl;
+            }
         } else {
             // Prime the first token.
             fprintf(stderr, "Cinderella Compiler CLI> ");
