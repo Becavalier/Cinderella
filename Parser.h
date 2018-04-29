@@ -72,8 +72,17 @@ public:
 
         // Read the list of argument names.
         vector<std::string> ArgNames;
-        while (Lexer::GetNextToken() == tok_identifier)
-            ArgNames.push_back(Lexer::IdentifierStr);
+        while (true) {
+            const char tok = Lexer::GetNextToken();
+            if (tok == tok_identifier) {
+                ArgNames.push_back(Lexer::IdentifierStr);
+            } else if (tok == ',') {
+                continue;
+            } else {
+                break;
+            }
+        }
+
         if (Lexer::CurTok != ')')
             return ExprAST::LogErrorP("Expected ')' in prototype");
 
