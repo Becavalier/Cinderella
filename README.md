@@ -35,7 +35,7 @@ Cinderella
 Cinderella -o <output.o> <source.hs>
 
 # Compile ".hs" source file into WebAssembly binary module (.wasm):
-Cinderella -t WASM -o <output.s> <source.hs>
+Cinderella -t WASM -o <output.wasm> <source.hs>
 ```
 
 #### 4、Sample Code:
