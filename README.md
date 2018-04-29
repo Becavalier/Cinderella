@@ -37,8 +37,8 @@ Cinderella -o <output.o> <source.hs>
 
 #### 4、Sample Code:
 ```hangScript
-def add(x y) x + y;
-def minus(x y) x - y;
+def add(x, y) x + y;
+def minus(x, y) x - y;
 ```
 
 #### 5、Capability and TODO:
