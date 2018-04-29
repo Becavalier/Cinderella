@@ -9,10 +9,10 @@ Cinderella language and its compiler, built with LLVM.
 # Fetch LLVM from remote server;
 wget http://releases.llvm.org/6.0.0/llvm-6.0.0.src.tar.xz
 
-# Rename;
+# Rename file;
 mv llvm-6.0.0.src.tar.xz llvm.tar.xz
 
-# Uncompress;
+# Uncompress bundle;
 xz -d llvm.tar.xz
 tar -xzvf llvm.tar
 
@@ -23,7 +23,11 @@ cd build && cmake .. && make
 
 #### 2、Build source code with CMake:
 ```commandline
-cd build && cmake .. && make && make install
+# Config CMake;
+cd build && cmake -DLLVM_EXPERIMENTAL_TARGETS_TO_BUILD=WebAssembly ..
+
+# Make;
+make && make install
 ```
 
 #### 3、Run Compiler in Command Line:
