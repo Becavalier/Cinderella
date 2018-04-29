@@ -36,6 +36,8 @@ include_directories("${PROJECT_SOURCE_DIR}/llvm/build/include")
 # Add the executable;
 add_executable(
         Cinderella
+        support/command-line.cc
+        support/command-line.h
         IOInterface.cc
         IOInterface.h
         Cinderella.cc

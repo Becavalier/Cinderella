@@ -5,6 +5,7 @@
 #include "LLVMBinder.h"
 #include "IOInterface.h"
 #include "Checker.h"
+#include "support/command-line.h"
 #include <cstdio>
 #include <map>
 #include "llvm/IR/Value.h"

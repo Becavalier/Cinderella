@@ -1,5 +1,9 @@
 #include "LLVMBinder.h"
 
+std::map<std::string, std::string> LLVMBinder::ISAList = {
+        std::pair<std::string, std::string>("WASM", "wasm32-unknown-unknown-wasm")
+};
+
 void LLVMBinder::wrapLLVMOptimizers() {
     // Do simple "peephole" optimizations and bit-twiddling optzns.
     TheFPM->add(llvm::createInstructionCombiningPass());
@@ -11,7 +15,7 @@ void LLVMBinder::wrapLLVMOptimizers() {
     TheFPM->add(llvm::createCFGSimplificationPass());
 };
 
-bool LLVMBinder::generateTargetObjectFile(std::string fileName) {
+bool LLVMBinder::generateTargetObjectFile(std::string triple, std::string fileName = "_t_cinderella") {
     // Initialize the target registry etc.
     llvm::InitializeAllTargetInfos();
     llvm::InitializeAllTargets();
@@ -19,7 +23,16 @@ bool LLVMBinder::generateTargetObjectFile(std::string fileName) {
     llvm::InitializeAllAsmParsers();
     llvm::InitializeAllAsmPrinters();
 
-    auto TargetTriple = llvm::sys::getDefaultTargetTriple();
+    std::string TargetTriple;
+
+    if (triple.size() == 0) {
+        TargetTriple = llvm::sys::getDefaultTargetTriple();
+    } else {
+        TargetTriple = ISAList.find(triple)->second;
+    }
+
+    std::cout << TargetTriple << std::endl;
+
     std::string Error;
     auto Target = llvm::TargetRegistry::lookupTarget(TargetTriple, Error);
 

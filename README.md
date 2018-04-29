@@ -33,17 +33,20 @@ Cinderella
 
 # Compiling mode (try build/sources);
 Cinderella -o <output.o> <source.hs>
+
+# Compile ".hs" source file into WebAssembly binary module (.wasm):
+Cinderella -t WASM -o <output.s> <source.hs>
 ```
 
 #### 4、Sample Code:
 ```hangScript
 def add(x, y) x + y;
-def minus(x, y) x - y;
 ```
 
 #### 5、Capability and TODO:
 - [x] Define simple function with binary expression;
+- [x] Embed on WebAssembly (LLVM-IR to Wat/Wasm);
 - [ ] Add standard control flow support;
 - [ ] Add customized local variable support;
 - [ ] Optimize compiler structure;
-- [ ] Embed on WebAssembly (LLVM-IR to Wat to Wasm);
+

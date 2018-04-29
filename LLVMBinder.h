@@ -1,6 +1,7 @@
 #pragma once
 
 #include <map>
+#include <iostream>
 #include <system_error>
 #include "llvm/IR/IRBuilder.h"
 #include "llvm/IR/LLVMContext.h"
@@ -20,6 +21,9 @@
 
 class LLVMBinder {
 
+private:
+    static std::map<std::string, std::string> ISAList;
+
 public:
     // Symbol table;
     static std::map<std::string, llvm::Value*> NamedValues;
@@ -38,5 +42,5 @@ public:
 
 
     static void wrapLLVMOptimizers();
-    static bool generateTargetObjectFile(std::string fileName);
+    static bool generateTargetObjectFile(std::string Triple, std::string fileName);
 };
