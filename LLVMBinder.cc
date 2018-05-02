@@ -31,8 +31,6 @@ bool LLVMBinder::generateTargetObjectFile(std::string triple, std::string fileNa
         TargetTriple = ISAList.find(triple)->second;
     }
 
-    std::cout << TargetTriple << std::endl;
-
     std::string Error;
     auto Target = llvm::TargetRegistry::lookupTarget(TargetTriple, Error);
 

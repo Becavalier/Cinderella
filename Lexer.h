@@ -2,9 +2,11 @@
 
 #include "IOInterface.h"
 #include <string>
+#include <vector>
 #include <map>
 #include <cstdio>
 #include <cstdlib>
+#include <algorithm>
 #include "llvm/ADT/STLExtras.h"
 
 
@@ -22,13 +24,15 @@ enum Token {
 
 class Lexer {
     Lexer () {}
+    ~Lexer();
+
+private:
+    static int _find_token();
 
 public:
     static std::string IdentifierStr;
     static double NumVal;
     static char CurTok;
-
-    static int _find_token();
 
 
     // Get token precedence;
@@ -44,7 +48,7 @@ public:
     }
 
     static int GetNextToken() {
-        return CurTok = _find_token();
+        return (CurTok = _find_token());
     };
 
     // Binary Expression Parsing;

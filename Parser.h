@@ -65,8 +65,8 @@ public:
             return std::move(ExprAST::LogErrorP("Expected function name in prototype"));
 
         std::string FnName = Lexer::IdentifierStr;
-        Lexer::GetNextToken();
 
+        Lexer::GetNextToken();
         if (Lexer::CurTok != tok_left_paren)
             return ExprAST::LogErrorP("Expected '(' in prototype");
 
