@@ -9,11 +9,15 @@
 
 
 enum Token {
-    tok_eof = -1,
-    tok_def = -2,
-    tok_extern = -3,
-    tok_identifier = -4,
-    tok_number = -5
+    tok_eof,
+    tok_def,
+    tok_extern,
+    tok_identifier,
+    tok_number,
+    tok_separator,
+    tok_left_paren,
+    tok_right_paren,
+    tok_expr_end
 };
 
 class Lexer {

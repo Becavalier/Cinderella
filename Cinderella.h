@@ -24,7 +24,7 @@ private:
         switch (Lexer::CurTok) {
             case tok_eof:
                 return;
-            case ';':
+            case tok_expr_end:
                 std::fprintf(stderr, "Cinderella Compiler CLI> ");
                 Lexer::GetNextToken();
                 // Re-Parsing;

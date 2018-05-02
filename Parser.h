@@ -67,7 +67,7 @@ public:
         std::string FnName = Lexer::IdentifierStr;
         Lexer::GetNextToken();
 
-        if (Lexer::CurTok != '(')
+        if (Lexer::CurTok != tok_left_paren)
             return ExprAST::LogErrorP("Expected '(' in prototype");
 
         // Read the list of argument names.
@@ -76,14 +76,14 @@ public:
             const char tok = Lexer::GetNextToken();
             if (tok == tok_identifier) {
                 ArgNames.push_back(Lexer::IdentifierStr);
-            } else if (tok == ',') {
+            } else if (tok == tok_separator) {
                 continue;
             } else {
                 break;
             }
         }
 
-        if (Lexer::CurTok != ')')
+        if (Lexer::CurTok != tok_right_paren)
             return ExprAST::LogErrorP("Expected ')' in prototype");
 
         // success.
@@ -137,7 +137,7 @@ public:
         if (!V)
             return nullptr;
 
-        if (Lexer::CurTok != ')') {
+        if (Lexer::CurTok != tok_right_paren) {
             return ExprAST::LogError("expected ')'");
         }
         Lexer::GetNextToken();
@@ -149,13 +149,13 @@ public:
 
         Lexer::GetNextToken();
 
-        if (Lexer::CurTok != '(')
+        if (Lexer::CurTok != tok_left_paren)
             return llvm::make_unique<VariableExprAST>(IdName);
 
         Lexer::GetNextToken();
 
         vector<std::unique_ptr<ExprAST>> Args;
-        if (Lexer::CurTok != ')') {
+        if (Lexer::CurTok != tok_right_paren) {
             while(1) {
                 if (auto Arg = ParseExpression()) {
                     Args.push_back(std::move(Arg));
@@ -163,11 +163,11 @@ public:
                     return nullptr;
                 }
 
-                if (Lexer::CurTok == ')') {
+                if (Lexer::CurTok == tok_right_paren) {
                     break;
                 }
 
-                if (Lexer::CurTok != ',') {
+                if (Lexer::CurTok != tok_separator) {
                     return ExprAST::LogError("Expected ')' or ',' in argument list");
                 }
 
@@ -186,7 +186,7 @@ public:
                 return ParseIdentifierExpr();
             case tok_number:
                 return ParseNumberExpr();
-            case '(':
+            case tok_left_paren:
                 return ParseParenExpr();
             default:
                 return ExprAST::LogError("unknown token when expecting an expression");

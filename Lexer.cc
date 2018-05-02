@@ -53,6 +53,22 @@ int Lexer::_find_token() {
             return _find_token();
     }
 
+    if (LastChar == '(') {
+        return tok_left_paren;
+    }
+
+    if (LastChar == ')') {
+        return tok_right_paren;
+    }
+
+    if (LastChar == ',') {
+        return tok_separator;
+    }
+
+    if (LastChar == ';') {
+        return tok_expr_end;
+    }
+
     // check for end of file.
     if (LastChar == EOF)
         return tok_eof;
