@@ -45,6 +45,7 @@ Cinderella -t WASM -o <output.wasm> <source.hs>
 #### 4、Sample Code:
 ```hangScript
 def add(x, y) x + y;
+def average(x, y) (x + y) / 2;
 ```
 
 #### 5、Capability and TODO:

@@ -23,6 +23,7 @@ int main(int argc, const char* argv[]) {
     Lexer::BinopPrecedence['+'] = 20;
     Lexer::BinopPrecedence['-'] = 30;
     Lexer::BinopPrecedence['*'] = 40;
+    Lexer::BinopPrecedence['/'] = 40;
 
 
     // Get current module;

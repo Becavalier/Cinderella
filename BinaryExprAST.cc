@@ -13,6 +13,8 @@ llvm::Value *BinaryExprAST::codegen() {
             return LLVMBinder::Builder.CreateFSub(L, R, "sub");
         case '*':
             return LLVMBinder::Builder.CreateFMul(L, R, "mul");
+        case '/':
+            return LLVMBinder::Builder.CreateFDiv(L, R, "div");
         case '<':
             L = LLVMBinder::Builder.CreateFCmpULT(L, R, "cmp");
             // Convert bool 0/1 to double 0.0 or 1.0, integer to float;
