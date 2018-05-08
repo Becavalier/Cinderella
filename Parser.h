@@ -17,9 +17,10 @@
 
 
 class Parser {
-    Parser () {}
-
 public:
+    Parser () = default;
+    ~Parser () = default;
+
     // Parser functions;
     static std::unique_ptr<ExprAST> ParseExpression() {
         // [binop, primaryexpr]

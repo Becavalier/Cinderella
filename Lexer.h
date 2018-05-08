@@ -23,13 +23,12 @@ enum Token {
 };
 
 class Lexer {
-    Lexer () {}
-    ~Lexer();
-
-private:
     static int _find_token();
 
 public:
+    Lexer () = default;
+    ~Lexer () = default;
+
     static std::string IdentifierStr;
     static double NumVal;
     static char CurTok;

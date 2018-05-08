@@ -87,7 +87,7 @@ public:
 
     // Main processing loop;
     static void MainCLILoop() {
-        while (1) {
+        while (true) {
             processSequenceCore();
         }
     }

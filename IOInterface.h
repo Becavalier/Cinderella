@@ -12,7 +12,8 @@ private:
     static int bufferPointer;
 
 public:
-    IOInterface() {}
+    IOInterface () = default;
+    ~IOInterface () = default;
 
     static std::string CompileSourceName;
 

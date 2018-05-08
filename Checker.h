@@ -5,6 +5,8 @@
 class Checker {
 
 public:
+    Checker () = default;
+    ~Checker () = default;
 
     static bool CheckGivenSourceFileType (const std::string &fileName);
 };
