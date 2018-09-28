@@ -1,6 +1,9 @@
 cmake_minimum_required (VERSION 2.6)
 project (Cinderella)
 
+SET(CMAKE_C_COMPILER gcc)
+SET(CMAKE_CXX_COMPILER g++)
+
 # Build LLVM in current source folder;
 set (LLVM_DIR "${PROJECT_SOURCE_DIR}/llvm/build/lib/cmake/llvm")
 
@@ -18,7 +21,7 @@ set (CINDERELLA_AUTHOR YHSPY)
 # Set c++ version;
 set (CMAKE_CXX_STANDARD 11)
 set (CMAKE_CXX_FLAGS_RELEASE "-O3")
-
+set (OUTPUT "Cinderella")
 
 # Configure a header file to pass some of the CMake settings to the source code;
 
@@ -32,47 +35,17 @@ include_directories("${PROJECT_SOURCE_DIR}")
 include_directories("${PROJECT_SOURCE_DIR}/llvm/include")
 include_directories("${PROJECT_SOURCE_DIR}/llvm/build/include")
 
+add_subdirectory (support/)
+aux_source_directory (. DIR_SRCS)
 
 # Add the executable;
-add_executable(
-        Cinderella
-        support/command-line.cc
-        support/command-line.h
-        IOInterface.cc
-        IOInterface.h
-        Cinderella.cc
-        Cinderella.h
-        Lexer.cc
-        Lexer.h
-        BinaryExprAST.cc
-        BinaryExprAST.h
-        CallExprAST.cc
-        CallExprAST.h
-        ExprAST.cc
-        ExprAST.h
-        FunctionAST.cc
-        FunctionAST.h
-        LLVMBinder.cc
-        LLVMBinder.h
-        NumberExprAST.cc
-        NumberExprAST.h
-        Parser.h
-        Parser.cc
-        PrototypeAST.cc
-        PrototypeAST.h
-        VariableExprAST.cc
-        VariableExprAST.h
-        Checker.cc
-        Checker.h
-        Error.cc
-        Error.h
-        )
+add_executable(${OUTPUT} ${DIR_SRCS})
 
 # Find the libraries that correspond to the LLVM components that we wish to use (all);
 llvm_map_components_to_libnames(llvm_libs ${LLVM_TARGETS_TO_BUILD})
 
 # Link against LLVM libraries
-target_link_libraries(Cinderella ${llvm_libs})
+target_link_libraries (${OUTPUT} ${llvm_libs} support)
 
-install(TARGETS Cinderella
+install(TARGETS ${OUTPUT}
         RUNTIME DESTINATION bin)
