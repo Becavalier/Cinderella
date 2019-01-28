@@ -9,12 +9,11 @@ Cinderella language and its compiler, built with LLVM.
 # Fetch LLVM from remote server;
 wget http://releases.llvm.org/6.0.0/llvm-6.0.0.src.tar.xz
 
-# Rename file;
-mv llvm-6.0.0.src.tar.xz llvm.tar.xz
-
 # Uncompress bundle;
-xz -d llvm.tar.xz
-tar -xzvf llvm.tar
+tar -xvJf llvm-6.0.0.src.tar.xz
+
+# Rename directory;
+mv llvm-6.0.0.src/ llvm/
 
 # Configure CMake and build;
 cd llvm && mkdir build
