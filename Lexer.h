@@ -9,7 +9,6 @@
 #include <algorithm>
 #include "llvm/ADT/STLExtras.h"
 
-
 enum Token {
     tok_eof,
     tok_def,
@@ -25,7 +24,7 @@ enum Token {
 class Lexer {
     static int _find_token();
 
-public:
+ public:
     Lexer () = default;
     ~Lexer () = default;
 
@@ -52,5 +51,4 @@ public:
 
     // Binary Expression Parsing;
     static std::map<char, int> BinopPrecedence;
-
 };

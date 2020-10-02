@@ -1,56 +1,34 @@
 # Cinderella
 Cinderella language and its compiler, built with LLVM.
 
-
 ## How to use on MacOS?
 
-#### 1、Build LLVM toolchain:
-```commandline
-# Fetch LLVM from remote server;
-wget http://releases.llvm.org/6.0.0/llvm-6.0.0.src.tar.xz
+* Only support LLVM 10;
+* LLVM should be compiled beforehand;
 
-# Uncompress bundle;
-tar -xvJf llvm-6.0.0.src.tar.xz
+#### Build source code with CMake:
+```shell
+# Config CMake (the placeholder {YOUR_LLVM_DIR} shoule be replaced by your LLVM folder);
+cd build && LLVM_BUILT_DIR="{YOUR_LLVM_DIR}" cmake ..
 
-# Rename directory;
-mv llvm-6.0.0.src/ llvm/
-
-# Configure CMake and build;
-cd llvm && mkdir build
-cd build && cmake .. && make
+# Compile;
+make -j4
 ```
 
-#### 2、Build source code with CMake:
-```commandline
-# Config CMake;
-cd build && cmake -DLLVM_EXPERIMENTAL_TARGETS_TO_BUILD=WebAssembly ..
-
-# Make;
-make && make install
-```
-
-#### 3、Run Compiler in Command Line:
-```commandline 
-# Command line mode;
-Cinderella
+#### Run Compiler in Command Line:
+```shell 
+# REPL mode;
+./cinderella
 
 # Compiling mode (try build/sources);
-Cinderella -o <output.o> <source.hs>
+./cinderella <source.hs> -o <output.o> 
 
-# Compile ".hs" source file into WebAssembly binary module (.wasm):
-Cinderella -t WASM -o <output.wasm> <source.hs>
+# Compile source file into WebAssembly binary module (.wasm):
+./cinderella <source.hs> -t WASM -o <output.wasm> 
 ```
 
-#### 4、Sample Code:
+#### Sample Code:
 ```hangScript
 def add(x, y) x + y;
 def average(x, y) (x + y) / 2;
 ```
-
-#### 5、Capability and TODO:
-- [x] Define simple function with binary expression;
-- [x] Embed on WebAssembly (LLVM-IR to Wat/Wasm);
-- [ ] Add standard control flow support;
-- [ ] Add customized local variable support;
-- [ ] Optimize compiler structure;
-

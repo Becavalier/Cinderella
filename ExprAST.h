@@ -6,8 +6,7 @@
 #include "PrototypeAST.h"
 
 
-class ExprAST {
-public:
+struct ExprAST {
     virtual ~ExprAST() = default;
 
     // Pure function, used for generating LLVM IR;

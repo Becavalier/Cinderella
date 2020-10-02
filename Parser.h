@@ -15,12 +15,7 @@
 #include <string>
 #include <vector>
 
-
-class Parser {
-public:
-    Parser () = default;
-    ~Parser () = default;
-
+struct Parser {
     // Parser functions;
     static std::unique_ptr<ExprAST> ParseExpression() {
         // [binop, primaryexpr]
@@ -57,7 +52,7 @@ public:
                 }
             }
 
-            LHS = llvm::make_unique<BinaryExprAST>(BinOp, std::move(LHS), std::move(RHS));
+            LHS = std::make_unique<BinaryExprAST>(BinOp, std::move(LHS), std::move(RHS));
         }
     }
 
@@ -90,7 +85,7 @@ public:
         // success.
         Lexer::GetNextToken();  // eat ')'.
 
-        return llvm::make_unique<PrototypeAST>(FnName, std::move(ArgNames));
+        return std::make_unique<PrototypeAST>(FnName, std::move(ArgNames));
     }
 
     /// definition ::= 'def' prototype expression
@@ -101,7 +96,7 @@ public:
         if (!Proto) return nullptr;
 
         if (auto E = ParseExpression())
-            return llvm::make_unique<FunctionAST>(std::move(Proto), std::move(E));
+            return std::make_unique<FunctionAST>(std::move(Proto), std::move(E));
         return nullptr;
     }
 
@@ -117,15 +112,15 @@ public:
         cout << "Cinderella: " << "literal top-level expression recognize ..." << endl;
         if (auto E = ParseExpression()) {
             // Make an anonymous proto.
-            auto Proto = llvm::make_unique<PrototypeAST>("__anon_expr", vector<std::string>());
-            return llvm::make_unique<FunctionAST>(std::move(Proto), std::move(E));
+            auto Proto = std::make_unique<PrototypeAST>("__anon_expr", vector<std::string>());
+            return std::make_unique<FunctionAST>(std::move(Proto), std::move(E));
         }
         return nullptr;
     }
 
     /// numberexpr ::= number
     static std::unique_ptr<ExprAST> ParseNumberExpr() {
-        auto Result = llvm::make_unique<NumberExprAST>(Lexer::NumVal);
+        auto Result = std::make_unique<NumberExprAST>(Lexer::NumVal);
         Lexer::GetNextToken();
         return std::move(Result);
     }
@@ -151,7 +146,7 @@ public:
         Lexer::GetNextToken();
 
         if (Lexer::CurTok != tok_left_paren)
-            return llvm::make_unique<VariableExprAST>(IdName);
+            return std::make_unique<VariableExprAST>(IdName);
 
         Lexer::GetNextToken();
 
@@ -178,7 +173,7 @@ public:
 
         Lexer::GetNextToken();
 
-        return llvm::make_unique<CallExprAST>(IdName, std::move(Args));
+        return std::make_unique<CallExprAST>(IdName, std::move(Args));
     }
 
     static std::unique_ptr<ExprAST> ParsePrimary() {

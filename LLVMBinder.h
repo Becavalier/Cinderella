@@ -20,10 +20,7 @@
 
 
 class LLVMBinder {
-
-private:
     static std::map<std::string, std::string> ISAList;
-
 public:
     // Symbol table;
     static std::map<std::string, llvm::Value*> NamedValues;

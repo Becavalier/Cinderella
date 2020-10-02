@@ -15,11 +15,7 @@
 
 #define AUTHOR CINDERELLA_AUTHOR
 
-
 class Cinderella {
-    Cinderella() {}
-
-private:
     static void processSequenceCore () {
         switch (Lexer::CurTok) {
             case tok_eof:
@@ -41,8 +37,7 @@ private:
                 break;
         }
     }
-
-public:
+ public:
     // Handler
     static void HandleDefinition() {
         if (auto FnAST = Parser::ParseDefinition()) {
@@ -98,6 +93,5 @@ public:
 
         processSequenceCore();
     }
-
 };
 

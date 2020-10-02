@@ -42,5 +42,4 @@ void IOInterface::InitialBufferPayload (const std::string &fileName) {
     }
 
     in.close();
-
 }

@@ -7,10 +7,9 @@
 
 class VariableExprAST: public ExprAST {
     std::string Name;
-
 public:
     VariableExprAST(const std::string &name)
-            : Name(name) {}
+        : Name(name) {}
 
     // Used for generating LLVM IR;
     llvm::Value *codegen() override;

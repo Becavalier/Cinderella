@@ -5,10 +5,8 @@
 
 #define BASE_PREFIX "[Cinderella ERROR] "
 
-
 class Error {
     static std::map<std::string, std::string> ErrorList;
-
 public:
     Error () = default;
     ~Error () = default;

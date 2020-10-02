@@ -6,11 +6,8 @@
 #include <fstream>
 
 class IOInterface {
-
-private:
     static char buffer[1024];
     static int bufferPointer;
-
 public:
     IOInterface () = default;
     ~IOInterface () = default;
@@ -19,5 +16,4 @@ public:
 
     static char ReadCharacterSource (void);
     static void InitialBufferPayload (const std::string &fileName);
-
 };

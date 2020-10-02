@@ -4,7 +4,6 @@ using namespace Support;
 
 std::map<char, int> Lexer::BinopPrecedence;
 
-
 std::map<std::string, llvm::Value*> LLVMBinder::NamedValues;
 
 llvm::LLVMContext LLVMBinder::TheContext;
@@ -17,7 +16,6 @@ std::unique_ptr<llvm::legacy::FunctionPassManager> LLVMBinder::TheFPM;
 
 
 int main(int argc, const char* argv[]) {
-
     // Set precedence list;
     Lexer::BinopPrecedence['<'] = 10;
     Lexer::BinopPrecedence['+'] = 20;
@@ -27,27 +25,28 @@ int main(int argc, const char* argv[]) {
 
 
     // Get current module;
-    LLVMBinder::TheModule = llvm::make_unique<llvm::Module>("Cinderella", LLVMBinder::TheContext);
+    LLVMBinder::TheModule = std::make_unique<llvm::Module>("Cinderella", LLVMBinder::TheContext);
 
     // Create a new pass manager attached to it.
-    LLVMBinder::TheFPM = llvm::make_unique<llvm::legacy::FunctionPassManager>(LLVMBinder::TheModule.get());
+    LLVMBinder::TheFPM = std::make_unique<llvm::legacy::FunctionPassManager>(LLVMBinder::TheModule.get());
 
     // Make the module, which holds all the code.
     LLVMBinder::wrapLLVMOptimizers();
 
     Options options("Cinderella", "A compiler toolchain for Cinderella language.");
-    options.add("--output", "-o", "Output file (stdout if not specified)", Options::Arguments::One,
-             [](Options *o, const std::string& argument) {
-                 o->extra["output"] = argument;
-             })
-            .add("--target", "-t", "Select aim target.", Options::Arguments::One,
-             [](Options *o, const std::string& argument) {
-                 o->extra["target"] = argument;
-             })
-            .add_positional("INFILE", Options::Arguments::One,
-             [](Options *o, const std::string& argument) {
-                 o->extra["infile"] = argument;
-             });
+    options
+        .add("--output", "-o", "Output file (stdout if not specified)", Options::Arguments::One,
+            [](Options *o, const std::string& argument) {
+                o->extra["output"] = argument;
+            })
+        .add("--target", "-t", "Select aim target.", Options::Arguments::One,
+            [](Options *o, const std::string& argument) {
+                o->extra["target"] = argument;
+            })
+        .add_positional("INFILE", Options::Arguments::One,
+            [](Options *o, const std::string& argument) {
+                o->extra["infile"] = argument;
+            });
     options.parse(argc, argv);
 
     if (options.extra.size() > 0) {

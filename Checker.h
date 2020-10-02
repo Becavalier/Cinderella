@@ -2,11 +2,6 @@
 #include <iostream>
 #include "Error.h"
 
-class Checker {
-
-public:
-    Checker () = default;
-    ~Checker () = default;
-
+struct Checker {
     static bool CheckGivenSourceFileType (const std::string &fileName);
 };

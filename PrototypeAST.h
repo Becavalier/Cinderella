@@ -13,7 +13,6 @@ using namespace std;
 class PrototypeAST {
     std::string Name;
     std::vector<std::string> Args;
-
 public:
     PrototypeAST (const std::string &name, const std::vector<std::string> Args)
             :Name(name), Args(move(Args)) {}

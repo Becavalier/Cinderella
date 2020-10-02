@@ -6,7 +6,6 @@ char Lexer::CurTok = tok_expr_end;
 
 // the implementation of "_find_token()"
 int Lexer::_find_token() {
-
     static int LastChar = ' ';
 
     // skip spaces;

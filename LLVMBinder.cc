@@ -1,12 +1,10 @@
 #include "LLVMBinder.h"
 
 std::map<std::string, std::string> LLVMBinder::ISAList = {
-        std::pair<std::string, std::string>("WASM", "wasm32-unknown-unknown-wasm")
+    std::pair<std::string, std::string>("WASM", "wasm32-unknown-unknown-wasm")
 };
 
 void LLVMBinder::wrapLLVMOptimizers() {
-    // Do simple "peephole" optimizations and bit-twiddling optzns.
-    TheFPM->add(llvm::createInstructionCombiningPass());
     // Reassociate expressions.
     TheFPM->add(llvm::createReassociatePass());
     // Eliminate Common SubExpressions.
@@ -61,9 +59,9 @@ bool LLVMBinder::generateTargetObjectFile(std::string triple, std::string fileNa
     }
 
     llvm::legacy::PassManager pass;
-    auto FileType =llvm::TargetMachine::CGFT_ObjectFile;
+    auto FileType =llvm::CodeGenFileType::CGFT_ObjectFile;
 
-    if (TheTargetMachine->addPassesToEmitFile(pass, dest, FileType)) {
+    if (TheTargetMachine->addPassesToEmitFile(pass, dest, nullptr, FileType)) {
         llvm::errs() << "TargetMachine can't emit a file of this type";
         return false;
     }
