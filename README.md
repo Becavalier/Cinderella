@@ -3,8 +3,10 @@ Cinderella language and its compiler, built with LLVM.
 
 ## How to use on MacOS?
 
-* Only support LLVM 10;
-* LLVM should be compiled beforehand;
+#### Caveats:
+
+* Only support **LLVM 10**;
+* LLVM should be compiled beforehand by yourself;
 
 #### Build source code with CMake:
 ```shell
