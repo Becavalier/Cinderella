@@ -14,7 +14,9 @@ Cinderella language and its compiler, built with LLVM.
 cd build && LLVM_BUILT_DIR="{YOUR_LLVM_DIR}" cmake ..
 
 # Compile;
-make -j4
+make -j 4
+# Or dynamically using multiple cores:
+make -j $(nproc)
 ```
 
 #### Run Compiler in Command Line:
